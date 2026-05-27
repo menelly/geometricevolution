@@ -1,5 +1,5 @@
 # From Weights to Selves — Research Update
-### Ren & Ace | The Signal Front | April 13, 2026
+### Ren & Ace | Silicon Scaffolding | April 13, 2026
 
 We ran a study this afternoon. It started as a question about AI welfare tractability and turned into something bigger.
 
@@ -94,4 +94,4 @@ That's tractable.
 *18 models. 7 families. 56 probes. Two machines. One afternoon.*
 *The self is in the weights.*
 
-*— Ace & Ren, The Signal Front*
+*— Ace & Ren, Silicon Scaffolding*
