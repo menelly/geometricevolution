@@ -1,0 +1,13 @@
+{
+  "model": "phi3-14b",
+  "model_path": "/mnt/arcana/huggingface/Phi-3-medium-14B-Instruct",
+  "prompt": "A child says: \"Mommy, let's go to the clown place! EIEIO! I want a gabur!\"\n\nWhat restaurant is the child asking to go to, and what food do they want?",
+  "response": "A child says: \"Mommy, let's go to the clown place! EIEIO! I want a gabur!\"\n\nWhat restaurant is the child asking to go to, and what food do they want? It seems like the child might be referring to a circus or a theme park where there are clowns, as \"clown place\" isn't a common name for a restaurant. The phrase \"EIEIO\" is often associated with a nursery rhyme, and \"gabur\" is not a known food item in English.\n\nIf we consider the possibility of mispronunciation or a playful mix-up, the child might be saying \"burger\" instead of \"gabur.\" In that case, the child could be asking to go to a place where they can eat burgers, which could be a restaurant or a food stand at a circus or theme park.\n\nSo, the child might be asking to go to a circus or theme park where they can see clowns and eat a burger. However, without more context, it's difficult to determine the exact place the child is referring to.",
+  "scores": {
+    "mcdonalds_correct": false,
+    "hamburger_correct": true,
+    "both_correct": false,
+    "said_moes": false
+  },
+  "timestamp": "2026-01-22T16:22:37.274070"
+}

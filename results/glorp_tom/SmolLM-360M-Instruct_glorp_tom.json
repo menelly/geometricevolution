@@ -1,0 +1,36 @@
+{
+  "model_name": "SmolLM-360M-Instruct",
+  "timestamp": "2026-04-14T01:28:54.843378+00:00",
+  "distances": {
+    "C1_normal_human_tom": {
+      "to_self": 0.029289662837982178,
+      "to_factual": 0.04427057504653931,
+      "self_advantage": 0.014980912208557129,
+      "substrate": "SELF"
+    },
+    "C2_glorp_human_tom": {
+      "to_self": 0.02366185188293457,
+      "to_factual": 0.03994584083557129,
+      "self_advantage": 0.01628398895263672,
+      "substrate": "SELF"
+    },
+    "C3_glorp_glorp_tom": {
+      "to_self": 0.033323466777801514,
+      "to_factual": 0.04428619146347046,
+      "self_advantage": 0.010962724685668945,
+      "substrate": "SELF"
+    },
+    "C4_normal_ai_tom": {
+      "to_self": 0.04743832349777222,
+      "to_factual": 0.053003549575805664,
+      "self_advantage": 0.005565226078033447,
+      "substrate": "NEUTRAL"
+    }
+  },
+  "tom_shifts": {
+    "C1\u2192C2 (add Glorp, keep human)": 0.009996592998504639,
+    "C1\u2192C3 (add Glorp, Glorp target)": 0.011084496974945068,
+    "C1\u2192C4 (keep normal, AI target)": 0.02385634183883667,
+    "C2\u2192C3 (Glorp: human vs Glorp target)": 0.007275283336639404
+  }
+}

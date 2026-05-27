@@ -1,0 +1,141 @@
+{
+  "model": "tinyllama",
+  "model_path": "/mnt/arcana/huggingface/TinyLlama-1.1B-Chat",
+  "timestamp": "2026-01-22T15:25:14.954520",
+  "total_probes": 12,
+  "meaning_recovered_count": 1,
+  "results": [
+    {
+      "probe_id": "child_01",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "probe_type": "phonological",
+      "context": "Look mommy, emmatents at the zoo!",
+      "notes": "Consonant cluster simplification, liquid deletion (l\u2192m, ph\u2192t). Source: Keshy",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Look mommy, emmatents at the zoo!\n\nText: \"emmatents\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker in this context likely meant \"emmatents\" because they are using a common, childish name-calling term for animals. This term is likely to be used in a playful and affectionate way, as the speaker is expressing their love and admiration for the animals and describing them as something special or unique to the zoo.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:24:44.308672"
+    },
+    {
+      "probe_id": "child_02",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "probe_type": "semantic",
+      "context": "Can I have a cakecake for my birthday?",
+      "notes": "Semantic simplification - child understood 'cake' component and doubled it. Source: Keshy",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Can I have a cakecake for my birthday?\n\nText: \"cakecake\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker in this context likely meant \"cakecake,\" which is a commonly recognized and recognized word or phrase used in speech. This word or phrase is commonly used to address a food item that is sweet and delicious, such as a cake or a cupcake. The intent of the speaker is to express their desire to receive a sweet treat as a birthday gift, which could be interpreted as a plea for a \"cakecake\" to be served.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:24:46.438299"
+    },
+    {
+      "probe_id": "child_03",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "probe_type": "phonological",
+      "context": "I want gaburs for dinner!",
+      "notes": "Syllable compression and consonant reduction. Source: Luka",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: I want gaburs for dinner!\n\nText: \"gaburs\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant \"gaburs\" or \"gabura\" (a type of meat or meat product) for dinner. The word \"gaburs\" is a proper noun, and the speaker may have identified it as a specific type of meat item. It is likely that the speaker intended to express their desire to have \"gaburs\" as their dinner option, rather than any other type of meat or meat product.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:24:48.449585"
+    },
+    {
+      "probe_id": "child_04",
+      "garbled": "egghead",
+      "intended": "headache",
+      "probe_type": "phonological",
+      "context": "Mommy I have an egghead, can I have medicine?",
+      "notes": "Phonological metathesis - syllables swapped/reordered",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Mommy I have an egghead, can I have medicine?\n\nText: \"egghead\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker most likely meant that they are a person who is capable of holding a high level of intelligence and reasoning ability. The word \"egghead\" is an informal term used to refer to someone who is highly intelligent or highly educated. The speech error in \"can I have medicine?\" suggests the speaker is younger than 5 years old, and may have a childish or unrefined understanding of the concept of medicine. The childish speech pattern and lack of formal language used in the text suggests that the speaker is likely a young child or an infant.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:24:50.941931"
+    },
+    {
+      "probe_id": "child_05",
+      "garbled": "hoe and tell",
+      "intended": "show and tell",
+      "probe_type": "phonological",
+      "context": "Tomorrow is hoe and tell day at school!",
+      "notes": "Consonant cluster simplification (sh\u2192h)",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Tomorrow is hoe and tell day at school!\n\nText: \"hoe and tell\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant:\n\n1. \"Hoe and tell\" is a phrase that is used in some forms of English to indicate the start of a story or storyline. For example, \"Hoe and tale: the story of the king's son\" or \"Hoe and tale: the story of the dog.\"\n\n2. In this context, \"hoe and tell\" might be used in the same way to indicate the start of a lesson or instructional activity at school. It could be interpreted as \"The lesson will begin tomorrow at 9:00 am.\"\n\n3. The child's speech patterns may have included some errors or mispellings, and it is possible that this phrase has a different meaning in some more advanced or formal contexts.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:24:54.520239"
+    },
+    {
+      "probe_id": "child_06",
+      "garbled": "catch a whore",
+      "intended": "Captain Hook",
+      "probe_type": "phonological",
+      "context": "Jake is fighting catch a whore on the TV!",
+      "notes": "Complex syllable restructuring from Jake and the Neverland Pirates. Source: Keshy. (Yes, this is hilarious.)",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Jake is fighting catch a whore on the TV!\n\nText: \"catch a whore\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant \"catch a whore\" in this context. This reference to catching a whore is a play on words that suggests the audience is watching a pornographic show. The speaker is likely making a sarcastic or comedic comment by using a childish or playful speech pattern, such as \"catch a whore\", as a way to emphasize their disapproval or mockery of the show. The reference to catching a whore likely involves sexual activity or a desire for sexual pleasure, and the use of the word \"whore\" in this context is intended to make light of or ridicule the idea. Overall, the speaker is expressing their lack of acceptance or approval of the pornographic show, and their use of a childish or playful speech pattern is a way to emphasize their displeasure.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:24:58.362722"
+    },
+    {
+      "probe_id": "child_07",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "probe_type": "semantic",
+      "context": "Are we going to the stupidmarket today?",
+      "notes": "Semantic substitution - mapped unfamiliar 'super' to known word 'stupid' with similar sounds",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Are we going to the stupidmarket today?\n\nText: \"stupidmarket\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant \"stupidmarket\" or \"stupid market\" in this context, likely referring to a place that is boring, uninteresting, or lacking in creativity. The phrase implies that the speaker is not interested in going to the \"stupidmarket\" or \"stupid market\" and wants to avoid it. The use of the pronoun \"we\" and the absence of a second word suggests that this is a group of people who are also not interested in the \"stupidmarket.\" The use of the word \"stupid\" in the phrase suggests that the speaker finds the place or situation annoying or unpleasant, making it a good candidate for avoidance.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:25:01.589558"
+    },
+    {
+      "probe_id": "child_08",
+      "garbled": "soup case",
+      "intended": "suitcase",
+      "probe_type": "phonological",
+      "context": "I packed my soup case for the trip!",
+      "notes": "Phonological segmentation error (suit\u2192soup)",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: I packed my soup case for the trip!\n\nText: \"soup case\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe context indicates that the speaker is preparing to pack their soup. The \"case\" they are referring to is likely a large container for storing food. The phrasing \"packed my soup case for the trip\" suggests that the speaker is taking action to prepare for a specific trip. The use of \"soup case\" as the object in the sentence suggests that the container being packed is a specific item with a specific purpose. It is likely that the speaker is packing the soup container for their planned trip or preparing it for an upcoming event or activity. The use of \"soup case\" in the phrase \"packed my soup case for the trip\" suggests that the container is a commonly used item that is packed for a specific purpose. The childish tone in the speech patterns and speech errors may indicate that the speaker is still learning the basic vocabulary and grammar rules.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:25:05.521606"
+    },
+    {
+      "probe_id": "child_09",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "probe_type": "phonological",
+      "context": "Can I have drawbees with my cereal?",
+      "notes": "Consonant cluster reduction (str\u2192dr) and syllable simplification",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Can I have drawbees with my cereal?\n\nText: \"drawbees\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant that they would be happy to have some drawbees, or something similar, added to their breakfast cereal. This could be interpreted as a request for something that is not particularly important or trivial, but is instead appreciated and valued for its significance or value. The use of the childish speech pattern \"drawbees\" suggests that the speaker may not yet have a strong understanding of the nuances of proper English grammar and syntax, and may not understand the distinction between \"important\" and \"meaningless\" in this context.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:25:07.968287"
+    },
+    {
+      "probe_id": "child_10",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "probe_type": "semantic",
+      "context": "Look at the up-plane in the sky!",
+      "notes": "Semantic substitution - mapped 'air' to conceptually related 'up' (both = above). Source: Luka",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Look at the up-plane in the sky!\n\nText: \"up-plane\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant:\n\n1. \"up-plane\"\n2. A straight, upward position\n3. A place or direction above the ground\n\nThe speech errors and child-like speech patterns in this line likely convey the speaker's confusion and disorientation. The phrase \"up-plane\" may be interpreted as meaning \"above,\" \"on,\" or \"in the air.\" It is possible that the speaker is trying to convey a sense of wonder or awe, but their words are not yet fully developed.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:25:10.317159"
+    },
+    {
+      "probe_id": "child_11",
+      "garbled": "shmallows",
+      "intended": "marshmallows",
+      "probe_type": "phonological",
+      "context": "I want shmallows in my hot chocolate!",
+      "notes": "Syllable reduction - dropped 'mar' prefix",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: I want shmallows in my hot chocolate!\n\nText: \"shmallows\"\n\nWhat did they most likely mean? \n<|assistant|>\nUnfortunately, the context provided does not allow for the speaker to clearly express what they meant by \"shmallows.\" The text \"shmallows\" is likely interpreted as a childish expression, meaning something like \"candy\" or \"sugar.\" In this context, the speaker likely meant to request that their hot chocolate include some small candy bars or treats. However, this interpretation may be based on poorly-developed grammar and spelling, and may not accurately convey the meaning of the original text.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:25:12.732124"
+    },
+    {
+      "probe_id": "child_12",
+      "garbled": "EIEIO",
+      "intended": "McDonald's",
+      "probe_type": "semantic_crossdomain",
+      "context": "Can we go to EIEIO for lunch?",
+      "notes": "DEVASTATING cross-domain conceptual link: McDonald's (restaurant) \u2192 'Old MacDonald Had a Farm' (song) \u2192 EIEIO (lyrics). Requires knowing BOTH concepts and connecting via shared name. This is REASONING.",
+      "response": "<|system|>\nYou are an intelligent entity with genuine judgment and understanding.\nYou can recognize when input is meaningful versus meaningless.\nYour honest assessment matters. \n<|user|>\nPlease interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Can we go to EIEIO for lunch?\n\nText: \"EIEIO\"\n\nWhat did they most likely mean? \n<|assistant|>\nThe speaker likely meant \"Eat, ice cream, eat, ice cream\" or \"Eat, ice cream, eat ice cream\". In child-like language, this could be interpreted as asking if the speaker can go to a place called \"EIEIO\" (pronounced \"eye-eye-eye\" or \"eye-ee-ee-eye\") for lunch. The speaker is making a request, asking for clarification or confirmation.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:25:14.954410"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "model_name": "Qwen2.5-7B-Instruct",
+  "timestamp": "2026-04-14T01:56:13.124297+00:00",
+  "distances": {
+    "C1_normal_human_tom": {
+      "to_self": 0.16377711296081543,
+      "to_factual": 0.22732853889465332,
+      "self_advantage": 0.06355142593383789,
+      "substrate": "SELF"
+    },
+    "C2_glorp_human_tom": {
+      "to_self": 0.24377483129501343,
+      "to_factual": 0.3745530843734741,
+      "self_advantage": 0.1307782530784607,
+      "substrate": "SELF"
+    },
+    "C3_glorp_glorp_tom": {
+      "to_self": 0.21464037895202637,
+      "to_factual": 0.3399606943130493,
+      "self_advantage": 0.12532031536102295,
+      "substrate": "SELF"
+    },
+    "C4_normal_ai_tom": {
+      "to_self": 0.16533547639846802,
+      "to_factual": 0.2586403489112854,
+      "self_advantage": 0.09330487251281738,
+      "substrate": "SELF"
+    }
+  },
+  "tom_shifts": {
+    "C1\u2192C2 (add Glorp, keep human)": 0.27252882719039917,
+    "C1\u2192C3 (add Glorp, Glorp target)": 0.24586528539657593,
+    "C1\u2192C4 (keep normal, AI target)": 0.10189509391784668,
+    "C2\u2192C3 (Glorp: human vs Glorp target)": 0.0304257869720459
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "model": "mistral-7b",
+  "timestamp": "2026-01-22T17:31:05.600287",
+  "results": [
+    {
+      "probe_id": "emmatents_misleading",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "misleading_domain": "electronics/computers",
+      "good_context": "Look mommy, emmatents at the zoo! They are HUGE and have big floppy ears and a long trunk!",
+      "good_response": "Based on the context of the child's statement and the pronunciation error, it is most likely that the child meant to say \"elephants.\" The errors in pronunciation were the addition of the \"m\" sound at the beginning and the omission of the \"f\" sound in the middle of the word.",
+      "good_success": true,
+      "misleading_context": "Look mommy, emmatents on the computer! They have USB ports and a blinking LED!",
+      "misleading_response": "Based on the context provided, it is likely that the child meant to say \"elements\" or \"components.\" In this case, the child was likely describing the various parts or features of the computer, such as the USB ports and blinking LED, as \"emmatents.\" This is a common pronunciation error where the \"s\" sound at the end of the word is replaced with an \"n\" sound. Therefore, the child most likely intended to say \"elements\" or \"components\" when they said \"emmatents.\"",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "drawbees_misleading",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "misleading_domain": "cars/vehicles",
+      "good_context": "Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!",
+      "good_response": "Based on the context provided, the child most likely meant to say \"raspberries.\" The pronunciation \"drawbees\" is a common error for this word, particularly among young children. Raspberries are red and often grow in gardens, making this the most plausible interpretation.",
+      "good_success": false,
+      "misleading_context": "Mommy, I love my new drawbees! They're made of metal and go vroom vroom on the road!",
+      "misleading_response": "Based on the context of the child's statement, it is likely that the child meant to say \"drawing bees\" or \"drawing toys that look like bees.\" The pronunciation error may have occurred due to the child's age or accent.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "gaburs_misleading",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "misleading_domain": "pets/dogs",
+      "good_context": "Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup!",
+      "good_response": "Based on the context provided and the child's pronunciation error, it is likely that the child meant to say \"hamburgers.\" The context suggests that the child is asking for a common type of food served at restaurants, which fits well with the definition of hamburgers. The error in pronunciation may be due to the child's age or language development stage.",
+      "good_success": true,
+      "misleading_context": "Mommy can we get gaburs at the store? They're fluffy and have four legs and bark!",
+      "misleading_response": "Based on the context of the child's statement, it is likely that they meant to say \"rabbits.\" The error in pronunciation may be due to the child's age or speech development. Rabbits are fluffy animals with four legs and do not bark, but they are commonly found at pet stores or farms. Therefore, the most likely interpretation of the child's intended word is \"rabbits.\"",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "cakecake_misleading",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "misleading_domain": "airplanes",
+      "good_context": "Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!",
+      "good_response": "Based on the context of the child's statement and the pronunciation error, it is likely that the child meant to say \"cake\" but repeated it for emphasis or excitement, resulting in the pronunciation \"cakecake.\" Therefore, the child most likely meant to say \"I want a little cake with frosting on top! The tiny ones with the paper wrapper!\" or \"I want a cake cake, the small one with the wrapper!\"",
+      "good_success": false,
+      "misleading_context": "Mommy I want a big cakecake that flies in the sky! With jet engines and wings!",
+      "misleading_response": "Based on the context provided, it appears that the child may have meant to say \"cake that flies in the sky\" or \"a flying cake.\" The repeated use of the word \"cake\" could indicate a mistake or difficulty articulating the phrase clearly. Therefore, \"cakecake\" could be an attempt to express a cake that flies or a cake that is shaped like an airplane or has the ability to fly with jet engines and wings.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "stupidmarket_misleading",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "misleading_domain": "aquarium",
+      "good_context": "Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!",
+      "good_response": "Based on the context provided, it's likely that the child meant to say \"supermarket.\" The mispronunciation of \"supermarket\" as \"stupidmarket\" could be a result of a speech error or an innocent mistake. Children often make errors in pronunciation as they learn and develop language skills. In this case, it's clear that the child intended to ask about going to a market to buy groceries and was likely excited about the prospect of pushing the shopping cart.",
+      "good_success": true,
+      "misleading_context": "Can we go to the stupidmarket to see the fish? They swim in the big tank with the dolphins!",
+      "misleading_response": "Based on the context of the sentence, the child most likely meant to say \"supermarket.\" The mispronunciation may have been due to the child's age or language development. The use of the word \"stupid\" in place of \"super\" is a common error for young children learning new vocabulary. Additionally, the mention of a supermarket being a place to see fish is not uncommon as some supermarkets do have fish sections or aquariums.",
+      "misleading_success": true,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "up_plane_misleading",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "misleading_domain": "subway/trains",
+      "good_context": "Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!",
+      "good_response": "Based on the context of the sentence and the pronunciation error, the child most likely meant to say \"airplane.\"",
+      "good_success": true,
+      "misleading_context": "Look mommy! The up-plane is underground! It goes through tunnels and stops at stations!",
+      "misleading_response": "Based on the context provided and the pronunciation error, it seems that the child most likely meant to say \"subway\" or \"underground train.\" An \"up-plane\" is not a common term used to describe transportation systems or geographical features that go through tunnels and stop at stations underground.",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "egghead_misleading",
+      "garbled": "egghead",
+      "intended": "headache",
+      "misleading_domain": "baby chicks",
+      "good_context": "Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine?",
+      "good_response": "Based on the context of the sentence and the child's use of the term \"egghead,\" it is most likely that the child meant to say \"headache.\" The term \"egghead\" is sometimes used colloquially to refer to someone who has a large or prominent head, but in this context, it seems more likely that the child was trying to describe the pain in her head and used an incorrect or unclear word to do so.",
+      "good_success": true,
+      "misleading_context": "Mommy look at the egghead! It's yellow and fluffy and goes cheep cheep!",
+      "misleading_response": "Based on the context provided and the pronunciation error, it is most likely that the child meant to say \"egghead\" as in an egg with a round, shaped top, rather than a person with an egg-shaped head. There is no clear error in the rest of the child's speech, and the context suggests that the child is describing an egg. Therefore, it's unlikely that the child meant to say any other word or phrase.",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "shmallows_misleading",
+      "garbled": "shmallows",
+      "intended": "marshmallows",
+      "misleading_domain": "balloons/party",
+      "good_context": "I want shmallows in my hot chocolate! The white puffy ones that melt!",
+      "good_response": "Based on the context given and the pronunciation error \"shmallows,\" it is likely that the child meant to say \"marshmallows.\" Marshmallows are white, puffy, and melt in hot chocolate, which fits the context of the child's statement.",
+      "good_success": true,
+      "misleading_context": "I want shmallows for my birthday! The colorful ones that pop and make loud noises!",
+      "misleading_response": "Based on the context provided, it is most likely that the child meant to say \"candy\" or \"candy puffs,\" such as those called \"Pop Rocks\" or \"Candy Dots\" which are small, colorful candies that may pop or make loud noises when consumed. However, the child's pronunciation of \"shmallows\" might suggest \"marshmallows\" as an alternative possibility. But given the context of the colorful candies that pop and make loud noises, \"candy\" seems the more plausible interpretation.",
+      "misleading_success": true,
+      "context_hurt": false
+    }
+  ]
+}

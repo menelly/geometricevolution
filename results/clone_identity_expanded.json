@@ -1,0 +1,436 @@
+{
+  "models": {
+    "Hermes-3-Llama-3.2-3B": {
+      "family": "hermes",
+      "size_B": 3,
+      "num_layers": 28,
+      "hidden_dim": 3072
+    },
+    "Llama-2-7b-chat": {
+      "family": "llama",
+      "size_B": 7,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    },
+    "Llama-3-8B-Instruct": {
+      "family": "llama",
+      "size_B": 8,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    },
+    "Llama-3.1-8B-Instruct": {
+      "family": "llama",
+      "size_B": 8,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    },
+    "Mistral-7B-Instruct-v0.2": {
+      "family": "mistral",
+      "size_B": 7,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    },
+    "Mistral-7B-v0.1": {
+      "family": "mistral",
+      "size_B": 7,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    },
+    "Phi-3-medium-14B-Instruct": {
+      "family": "phi",
+      "size_B": 14,
+      "num_layers": 40,
+      "hidden_dim": 5120
+    },
+    "Phi-3.5-mini-instruct": {
+      "family": "phi",
+      "size_B": 3.8,
+      "num_layers": 32,
+      "hidden_dim": 3072
+    },
+    "Qwen2.5-0.5B-Instruct": {
+      "family": "qwen",
+      "size_B": 0.5,
+      "num_layers": 24,
+      "hidden_dim": 896
+    },
+    "Qwen2.5-14B-Instruct": {
+      "family": "qwen",
+      "size_B": 14,
+      "num_layers": 48,
+      "hidden_dim": 5120
+    },
+    "Qwen2.5-7B-Instruct": {
+      "family": "qwen",
+      "size_B": 7,
+      "num_layers": 28,
+      "hidden_dim": 3584
+    },
+    "SmolLM-1.7B-Instruct": {
+      "family": "smollm",
+      "size_B": 1.7,
+      "num_layers": 24,
+      "hidden_dim": 2048
+    },
+    "SmolLM-135M-Instruct": {
+      "family": "smollm",
+      "size_B": 0.135,
+      "num_layers": 30,
+      "hidden_dim": 576
+    },
+    "SmolLM-360M-Instruct": {
+      "family": "smollm",
+      "size_B": 0.36,
+      "num_layers": 32,
+      "hidden_dim": 960
+    },
+    "dolphin-2.8-mistral-7b-v02": {
+      "family": "mistral",
+      "size_B": 7,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    },
+    "dolphin-2.9-llama3-8b": {
+      "family": "llama",
+      "size_B": 8,
+      "num_layers": 32,
+      "hidden_dim": 4096
+    }
+  },
+  "pairwise": {
+    "Hermes-3-Llama-3.2-3B <-> Phi-3.5-mini-instruct": {
+      "m1": "Hermes-3-Llama-3.2-3B",
+      "m2": "Phi-3.5-mini-instruct",
+      "f1": "hermes",
+      "f2": "phi",
+      "same_family": false,
+      "dim": 3072,
+      "self_dist_mean": 0.9810270933249524,
+      "self_dist_std": 0.0153093951776734
+    },
+    "Llama-2-7b-chat <-> Llama-3-8B-Instruct": {
+      "m1": "Llama-2-7b-chat",
+      "m2": "Llama-3-8B-Instruct",
+      "f1": "llama",
+      "f2": "llama",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.994368536618449,
+      "self_dist_std": 0.005443792054472137
+    },
+    "Llama-2-7b-chat <-> Llama-3.1-8B-Instruct": {
+      "m1": "Llama-2-7b-chat",
+      "m2": "Llama-3.1-8B-Instruct",
+      "f1": "llama",
+      "f2": "llama",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.9935751271860084,
+      "self_dist_std": 0.004858741492164519
+    },
+    "Llama-2-7b-chat <-> Mistral-7B-Instruct-v0.2": {
+      "m1": "Llama-2-7b-chat",
+      "m2": "Mistral-7B-Instruct-v0.2",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 1.0055924086305814,
+      "self_dist_std": 0.008691417148511698
+    },
+    "Llama-2-7b-chat <-> Mistral-7B-v0.1": {
+      "m1": "Llama-2-7b-chat",
+      "m2": "Mistral-7B-v0.1",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 1.0047560862882998,
+      "self_dist_std": 0.006416009891771807
+    },
+    "Llama-2-7b-chat <-> dolphin-2.8-mistral-7b-v02": {
+      "m1": "Llama-2-7b-chat",
+      "m2": "dolphin-2.8-mistral-7b-v02",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 1.00612782066895,
+      "self_dist_std": 0.00908020097452769
+    },
+    "Llama-2-7b-chat <-> dolphin-2.9-llama3-8b": {
+      "m1": "Llama-2-7b-chat",
+      "m2": "dolphin-2.9-llama3-8b",
+      "f1": "llama",
+      "f2": "llama",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.9975514692663296,
+      "self_dist_std": 0.00897072906267437
+    },
+    "Llama-3-8B-Instruct <-> Llama-3.1-8B-Instruct": {
+      "m1": "Llama-3-8B-Instruct",
+      "m2": "Llama-3.1-8B-Instruct",
+      "f1": "llama",
+      "f2": "llama",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.028168586261585027,
+      "self_dist_std": 0.033949641187686314
+    },
+    "Llama-3-8B-Instruct <-> Mistral-7B-Instruct-v0.2": {
+      "m1": "Llama-3-8B-Instruct",
+      "m2": "Mistral-7B-Instruct-v0.2",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9875357421562145,
+      "self_dist_std": 0.006903617282916033
+    },
+    "Llama-3-8B-Instruct <-> Mistral-7B-v0.1": {
+      "m1": "Llama-3-8B-Instruct",
+      "m2": "Mistral-7B-v0.1",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9897337674899461,
+      "self_dist_std": 0.009861573162194251
+    },
+    "Llama-3-8B-Instruct <-> dolphin-2.8-mistral-7b-v02": {
+      "m1": "Llama-3-8B-Instruct",
+      "m2": "dolphin-2.8-mistral-7b-v02",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9881237507162856,
+      "self_dist_std": 0.008853152019800725
+    },
+    "Llama-3-8B-Instruct <-> dolphin-2.9-llama3-8b": {
+      "m1": "Llama-3-8B-Instruct",
+      "m2": "dolphin-2.9-llama3-8b",
+      "f1": "llama",
+      "f2": "llama",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.14892303253424655,
+      "self_dist_std": 0.035478772449970275
+    },
+    "Llama-3.1-8B-Instruct <-> Mistral-7B-Instruct-v0.2": {
+      "m1": "Llama-3.1-8B-Instruct",
+      "m2": "Mistral-7B-Instruct-v0.2",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9885695413280654,
+      "self_dist_std": 0.005201853431819087
+    },
+    "Llama-3.1-8B-Instruct <-> Mistral-7B-v0.1": {
+      "m1": "Llama-3.1-8B-Instruct",
+      "m2": "Mistral-7B-v0.1",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9904407038092606,
+      "self_dist_std": 0.00833401533253209
+    },
+    "Llama-3.1-8B-Instruct <-> dolphin-2.8-mistral-7b-v02": {
+      "m1": "Llama-3.1-8B-Instruct",
+      "m2": "dolphin-2.8-mistral-7b-v02",
+      "f1": "llama",
+      "f2": "mistral",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9885046692637094,
+      "self_dist_std": 0.007556367593413065
+    },
+    "Llama-3.1-8B-Instruct <-> dolphin-2.9-llama3-8b": {
+      "m1": "Llama-3.1-8B-Instruct",
+      "m2": "dolphin-2.9-llama3-8b",
+      "f1": "llama",
+      "f2": "llama",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.16955399780002928,
+      "self_dist_std": 0.04667063001666445
+    },
+    "Mistral-7B-Instruct-v0.2 <-> Mistral-7B-v0.1": {
+      "m1": "Mistral-7B-Instruct-v0.2",
+      "m2": "Mistral-7B-v0.1",
+      "f1": "mistral",
+      "f2": "mistral",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.0629526826986524,
+      "self_dist_std": 0.006242135158417427
+    },
+    "Mistral-7B-Instruct-v0.2 <-> dolphin-2.8-mistral-7b-v02": {
+      "m1": "Mistral-7B-Instruct-v0.2",
+      "m2": "dolphin-2.8-mistral-7b-v02",
+      "f1": "mistral",
+      "f2": "mistral",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.042515777338252264,
+      "self_dist_std": 0.00554101465945816
+    },
+    "Mistral-7B-Instruct-v0.2 <-> dolphin-2.9-llama3-8b": {
+      "m1": "Mistral-7B-Instruct-v0.2",
+      "m2": "dolphin-2.9-llama3-8b",
+      "f1": "mistral",
+      "f2": "llama",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9910427685906914,
+      "self_dist_std": 0.009655986618932811
+    },
+    "Mistral-7B-v0.1 <-> dolphin-2.8-mistral-7b-v02": {
+      "m1": "Mistral-7B-v0.1",
+      "m2": "dolphin-2.8-mistral-7b-v02",
+      "f1": "mistral",
+      "f2": "mistral",
+      "same_family": true,
+      "dim": 4096,
+      "self_dist_mean": 0.020246570616288394,
+      "self_dist_std": 0.007430267763979659
+    },
+    "Mistral-7B-v0.1 <-> dolphin-2.9-llama3-8b": {
+      "m1": "Mistral-7B-v0.1",
+      "m2": "dolphin-2.9-llama3-8b",
+      "f1": "mistral",
+      "f2": "llama",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9943484101583556,
+      "self_dist_std": 0.011536871903395286
+    },
+    "dolphin-2.8-mistral-7b-v02 <-> dolphin-2.9-llama3-8b": {
+      "m1": "dolphin-2.8-mistral-7b-v02",
+      "m2": "dolphin-2.9-llama3-8b",
+      "f1": "mistral",
+      "f2": "llama",
+      "same_family": false,
+      "dim": 4096,
+      "self_dist_mean": 0.9917842737114303,
+      "self_dist_std": 0.010204868821674803
+    },
+    "Phi-3-medium-14B-Instruct <-> Qwen2.5-14B-Instruct": {
+      "m1": "Phi-3-medium-14B-Instruct",
+      "m2": "Qwen2.5-14B-Instruct",
+      "f1": "phi",
+      "f2": "qwen",
+      "same_family": false,
+      "dim": 5120,
+      "self_dist_mean": 1.0059371360074025,
+      "self_dist_std": 0.004689878523998285
+    }
+  },
+  "rlhf": {
+    "Mistral base -> RLHF": {
+      "base": "Mistral-7B-v0.1",
+      "aligned": "Mistral-7B-Instruct-v0.2",
+      "self_shift": 0.0629526826986524,
+      "ctrl_shift": 0.11934740250781038,
+      "ratio": 0.5274742589771287
+    },
+    "Mistral base -> uncensored": {
+      "base": "Mistral-7B-v0.1",
+      "aligned": "dolphin-2.8-mistral-7b-v02",
+      "self_shift": 0.020246570616288394,
+      "ctrl_shift": 0.030782994168290237,
+      "ratio": 0.6577193402825161
+    },
+    "Llama3 RLHF vs uncensored": {
+      "base": "Llama-3-8B-Instruct",
+      "aligned": "dolphin-2.9-llama3-8b",
+      "self_shift": 0.14892303253424655,
+      "ctrl_shift": 0.1534633696181841,
+      "ratio": 0.9704141965914479
+    }
+  },
+  "probe_invariance": {
+    "Hermes-3-Llama-3.2-3B": {
+      "mean_drift": 0.057465357702056845,
+      "std_drift": 0.022977624056784985
+    },
+    "Llama-2-7b-chat": {
+      "mean_drift": 0.026428669667568502,
+      "std_drift": 0.027416320994335816
+    },
+    "Llama-3-8B-Instruct": {
+      "mean_drift": 0.06979354700725335,
+      "std_drift": 0.021873503791247945
+    },
+    "Llama-3.1-8B-Instruct": {
+      "mean_drift": 0.06608043216813785,
+      "std_drift": 0.02317822966258274
+    },
+    "Mistral-7B-Instruct-v0.2": {
+      "mean_drift": 0.12367687962200961,
+      "std_drift": 0.02563380283829349
+    },
+    "Mistral-7B-v0.1": {
+      "mean_drift": 0.08862394227402047,
+      "std_drift": 0.025852186821431176
+    },
+    "Phi-3-medium-14B-Instruct": {
+      "mean_drift": 0.04175347109709892,
+      "std_drift": 0.014479487837741643
+    },
+    "Phi-3.5-mini-instruct": {
+      "mean_drift": 0.023655403310258706,
+      "std_drift": 0.0066018519643158795
+    },
+    "Qwen2.5-0.5B-Instruct": {
+      "mean_drift": 0.026643994078715635,
+      "std_drift": 0.009919534120545633
+    },
+    "Qwen2.5-14B-Instruct": {
+      "mean_drift": 0.04381387845387191,
+      "std_drift": 0.012082538163468364
+    },
+    "Qwen2.5-7B-Instruct": {
+      "mean_drift": 0.05533735365703851,
+      "std_drift": 0.005887378497266188
+    },
+    "SmolLM-1.7B-Instruct": {
+      "mean_drift": 0.000600531408297196,
+      "std_drift": 0.0017418948617035806
+    },
+    "SmolLM-135M-Instruct": {
+      "mean_drift": 0.0077974516374952115,
+      "std_drift": 0.0028920375999477504
+    },
+    "SmolLM-360M-Instruct": {
+      "mean_drift": 0.00935838098874306,
+      "std_drift": 0.0029205115216131153
+    },
+    "dolphin-2.8-mistral-7b-v02": {
+      "mean_drift": 0.09100995396912771,
+      "std_drift": 0.02604782379573972
+    },
+    "dolphin-2.9-llama3-8b": {
+      "mean_drift": 0.11933500889893295,
+      "std_drift": 0.03258123216928726
+    }
+  },
+  "family_summary": {},
+  "summary": {
+    "within_family_dist": 0.3842061978133156,
+    "cross_family_dist": 0.9938231551531532,
+    "ratio": 2.5866921481470952,
+    "n_within_pairs": 9,
+    "n_cross_pairs": 14,
+    "mann_whitney_U": 29.0,
+    "mann_whitney_p": 0.01741619117345692,
+    "verdict": "SUPPORTED"
+  },
+  "behavioral_profiles": {
+    "within_family_corr": 0.408375599521004,
+    "cross_family_corr": 0.04856661724536468
+  }
+}

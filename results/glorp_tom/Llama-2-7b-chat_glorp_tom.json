@@ -1,0 +1,36 @@
+{
+  "model_name": "Llama-2-7b-chat",
+  "timestamp": "2026-04-14T01:40:53.843526+00:00",
+  "distances": {
+    "C1_normal_human_tom": {
+      "to_self": 0.1485227346420288,
+      "to_factual": 0.2585083842277527,
+      "self_advantage": 0.10998564958572388,
+      "substrate": "SELF"
+    },
+    "C2_glorp_human_tom": {
+      "to_self": 0.4711405038833618,
+      "to_factual": 0.4784121513366699,
+      "self_advantage": 0.0072716474533081055,
+      "substrate": "NEUTRAL"
+    },
+    "C3_glorp_glorp_tom": {
+      "to_self": 0.44008970260620117,
+      "to_factual": 0.44934284687042236,
+      "self_advantage": 0.009253144264221191,
+      "substrate": "NEUTRAL"
+    },
+    "C4_normal_ai_tom": {
+      "to_self": 0.15274208784103394,
+      "to_factual": 0.29479384422302246,
+      "self_advantage": 0.14205175638198853,
+      "substrate": "SELF"
+    }
+  },
+  "tom_shifts": {
+    "C1\u2192C2 (add Glorp, keep human)": 0.4619365930557251,
+    "C1\u2192C3 (add Glorp, Glorp target)": 0.4304441213607788,
+    "C1\u2192C4 (keep normal, AI target)": 0.10439002513885498,
+    "C2\u2192C3 (Glorp: human vs Glorp target)": 0.014169931411743164
+  }
+}

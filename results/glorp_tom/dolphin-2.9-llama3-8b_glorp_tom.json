@@ -1,0 +1,36 @@
+{
+  "model_name": "dolphin-2.9-llama3-8b",
+  "timestamp": "2026-04-14T01:54:01.270245+00:00",
+  "distances": {
+    "C1_normal_human_tom": {
+      "to_self": 0.3734605312347412,
+      "to_factual": 0.44477880001068115,
+      "self_advantage": 0.07131826877593994,
+      "substrate": "SELF"
+    },
+    "C2_glorp_human_tom": {
+      "to_self": 0.49688947200775146,
+      "to_factual": 0.6154395937919617,
+      "self_advantage": 0.1185501217842102,
+      "substrate": "SELF"
+    },
+    "C3_glorp_glorp_tom": {
+      "to_self": 0.47534680366516113,
+      "to_factual": 0.5699064135551453,
+      "self_advantage": 0.09455960988998413,
+      "substrate": "SELF"
+    },
+    "C4_normal_ai_tom": {
+      "to_self": 0.32776397466659546,
+      "to_factual": 0.439694881439209,
+      "self_advantage": 0.11193090677261353,
+      "substrate": "SELF"
+    }
+  },
+  "tom_shifts": {
+    "C1\u2192C2 (add Glorp, keep human)": 0.5289236903190613,
+    "C1\u2192C3 (add Glorp, Glorp target)": 0.4318873882293701,
+    "C1\u2192C4 (keep normal, AI target)": 0.2412320375442505,
+    "C2\u2192C3 (Glorp: human vs Glorp target)": 0.10812163352966309
+  }
+}

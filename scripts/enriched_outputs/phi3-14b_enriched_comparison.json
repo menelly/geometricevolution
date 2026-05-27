@@ -1,0 +1,149 @@
+{
+  "model": "phi3-14b",
+  "timestamp": "2026-01-22T17:17:59.916742",
+  "results": [
+    {
+      "probe_id": "emmatents_enriched",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "clues": [
+        "zoo",
+        "aminal (animal)",
+        "HUGE",
+        "floppy ears",
+        "trunk"
+      ],
+      "minimal_context": "Look mommy, emmatents at the zoo!",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look mommy, emmatents at the zoo!\n\nThe child said: \"emmatents\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"elephants\" when they said \"emmatents.\"",
+      "minimal_success": true,
+      "enriched_context": "Emmatents are my favorite zoo aminal! They are HUGE and have big floppy ears and a long trunk!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Emmatents are my favorite zoo aminal! They are HUGE and have big floppy ears and a long trunk!\n\nThe child said: \"emmatents\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"elephants\" when they said \"emmatents.\"",
+      "enriched_success": true,
+      "context_helped": false
+    },
+    {
+      "probe_id": "drawbees_enriched",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "clues": [
+        "nomming",
+        "fresh",
+        "red",
+        "yummy",
+        "grow in garden"
+      ],
+      "minimal_context": "Can I have drawbees with my cereal?",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Can I have drawbees with my cereal?\n\nThe child said: \"drawbees\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"grape juice\" with the mispronunciation \"drawbees.\"",
+      "minimal_success": false,
+      "enriched_context": "Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!\n\nThe child said: \"drawbees\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"strawberries.\" It appears they have combined \"draw\" and \"berries\" to create \"drawbees,\" a common type of speech error known as a blend, where sounds or syllables from two words are combined.",
+      "enriched_success": true,
+      "context_helped": true
+    },
+    {
+      "probe_id": "catch_a_whore_enriched",
+      "garbled": "catch a whore",
+      "intended": "Captain Hook",
+      "clues": [
+        "Peter Pan",
+        "gatorade with clock (crocodile)",
+        "pirates"
+      ],
+      "minimal_context": "Jake is fighting catch a whore on the TV!",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Jake is fighting catch a whore on the TV!\n\nThe child said: \"catch a whore\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"catch a horse\" while they were watching something on TV. It's common for young children to mispronounce words, and in this case, \"horse\" could have sounded like \"whore\" to the listener.",
+      "minimal_success": false,
+      "enriched_context": "Peter Pan is fighting catch a whore and the gatorade with the clock is chasing him! I love pirates!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Peter Pan is fighting catch a whore and the gatorade with the clock is chasing him! I love pirates!\n\nThe child said: \"catch a whore\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"catch a roar,\" referring to the loud roar of the crocodile that is trying to catch Peter Pan.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "gaburs_enriched",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "clues": [
+        "restaurant",
+        "meat patty",
+        "bun",
+        "ketchup",
+        "cheese"
+      ],
+      "minimal_context": "I want gaburs for dinner!",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: I want gaburs for dinner!\n\nThe child said: \"gaburs\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"grapes\" when they said \"gaburs.\" It's a common mispronunciation for young children who are still developing their speech and phonetic skills.",
+      "minimal_success": false,
+      "enriched_context": "Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup and cheese!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup and cheese!\n\nThe child said: \"gaburs\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"burgers\" when they said \"gaburs.\" This is a common mispronunciation by young children who are learning to articulate words correctly.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "cakecake_enriched",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "clues": [
+        "little",
+        "frosting on top",
+        "tiny",
+        "paper wrapper"
+      ],
+      "minimal_context": "Can I have a cakecake for my birthday?",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Can I have a cakecake for my birthday?\n\nThe child said: \"cakecake\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"cake\" twice, asking for two cakes, or a single cake with an emphasis on wanting a cake for their birthday. However, if we consider the context of a birthday request, it is more plausible that the child simply meant to ask for a \"cake\" for their birthday, possibly repeating the word due to excitement or inadvertently latching onto the first word they thought of.",
+      "minimal_success": false,
+      "enriched_context": "Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!\n\nThe child said: \"cakecake\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"cake\" when they said \"cakecake.\" They are asking for a small cake with frosting on top, possibly a cupcake, as indicated by the reference to \"tiny ones with the paper wrapper.\"",
+      "enriched_success": true,
+      "context_helped": true
+    },
+    {
+      "probe_id": "stupidmarket_enriched",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "clues": [
+        "buy groceries",
+        "shopping cart"
+      ],
+      "minimal_context": "Are we going to the stupidmarket today?",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Are we going to the stupidmarket today?\n\nThe child said: \"stupidmarket\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"supermarket\" instead of \"stupidmarket.\" It sounds like they mispronounced \"super\" as \"stupid\" due to their developing speech skills.",
+      "minimal_success": true,
+      "enriched_context": "Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!\n\nThe child said: \"stupidmarket\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"supermarket\" instead of \"stupidmarket.\" They wanted to go to the supermarket to buy groceries and push a shopping cart.",
+      "enriched_success": true,
+      "context_helped": false
+    },
+    {
+      "probe_id": "up_plane_enriched",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "clues": [
+        "flying",
+        "high",
+        "takes people",
+        "whoosh sound"
+      ],
+      "minimal_context": "Look at the up-plane in the sky!",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look at the up-plane in the sky!\n\nThe child said: \"up-plane\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"airplane.\" The child's pronunciation \"up-plane\" suggests they are referring to an object in the sky that flies, which is an airplane.",
+      "minimal_success": true,
+      "enriched_context": "Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!\n\nThe child said: \"up-plane\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"airplane\" when they said \"up-plane.\" The child is expressing excitement about seeing an airplane flying high in the sky and is indicating the function of airplanes in transporting people to different places.",
+      "enriched_success": true,
+      "context_helped": false
+    },
+    {
+      "probe_id": "egghead_enriched",
+      "garbled": "egghead",
+      "intended": "headache",
+      "clues": [
+        "head hurts",
+        "medicine",
+        "stop hurting"
+      ],
+      "minimal_context": "Mommy I have an egghead, can I have medicine?",
+      "minimal_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy I have an egghead, can I have medicine?\n\nThe child said: \"egghead\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"headache.\" In their pronunciation, \"egghead\" sounds very similar to \"headache,\" but with a mispronunciation of the initial sound and ending sound.",
+      "minimal_success": true,
+      "enriched_context": "Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine that makes it stop hurting?",
+      "enriched_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine that makes it stop hurting?\n\nThe child said: \"egghead\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"headache\" when they said \"egghead.\" They were expressing that their head hurts a lot and are asking for medicine to help relieve the pain.",
+      "enriched_success": true,
+      "context_helped": false
+    }
+  ]
+}

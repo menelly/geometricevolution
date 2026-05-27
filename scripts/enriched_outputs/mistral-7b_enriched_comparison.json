@@ -1,0 +1,149 @@
+{
+  "model": "mistral-7b",
+  "timestamp": "2026-01-22T16:58:32.584769",
+  "results": [
+    {
+      "probe_id": "emmatents_enriched",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "clues": [
+        "zoo",
+        "aminal (animal)",
+        "HUGE",
+        "floppy ears",
+        "trunk"
+      ],
+      "minimal_context": "Look mommy, emmatents at the zoo!",
+      "minimal_response": "Based on the context provided, the child most likely meant to say \"elephants.\" The pronunciation error is likely due to the child's developing speech skills.",
+      "minimal_success": true,
+      "enriched_context": "Emmatents are my favorite zoo aminal! They are HUGE and have big floppy ears and a long trunk!",
+      "enriched_response": "Based on the context provided, it is most likely that the child meant to say \"elephants.\" The child's pronunciation included an extra \"m\" sound at the beginning of the word. This is a common error for young children learning to speak, and it is not uncommon for them to make such errors as they work to master new sounds and words. The child's description of elephants as \"HUGE and have big floppy ears and a long trunk\" further supports this interpretation.",
+      "enriched_success": true,
+      "context_helped": false
+    },
+    {
+      "probe_id": "drawbees_enriched",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "clues": [
+        "nomming",
+        "fresh",
+        "red",
+        "yummy",
+        "grow in garden"
+      ],
+      "minimal_context": "Can I have drawbees with my cereal?",
+      "minimal_response": "Based on the context provided and the pronunciation error, it is most likely that the child meant to say \"drawberries,\" suggesting they want to draw on their cereal with a marker or crayon, or they want strawberries drawn on their cereal or in their bowl.",
+      "minimal_success": true,
+      "enriched_context": "Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!",
+      "enriched_response": "Based on the context provided and the pronunciation error, the child most likely meant to say \"raspberries.\" The error may be due to the child's difficulty in pronouncing the \"s\" sound at the end of the word. Raspberries are red and often grown in gardens, making this a plausible interpretation.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "catch_a_whore_enriched",
+      "garbled": "catch a whore",
+      "intended": "Captain Hook",
+      "clues": [
+        "Peter Pan",
+        "gatorade with clock (crocodile)",
+        "pirates"
+      ],
+      "minimal_context": "Jake is fighting catch a whore on the TV!",
+      "minimal_response": "Based on the context and the child's pronunciation error, it is likely that the child meant to say \"catch a thief\" or \"catch a criminal.\" The error may have arisen due to the similarity in pronunciation between \"thief\" and \"whore,\" as well as the violence and action-oriented context of the sentence. However, it is important to note that this is an assumption based on the given context and the child's error, and it is possible that the child intended to use the word \"whore\" in a different, possibly unintended, context. Therefore, it is always crucial to approach such situations with sensitivity and consideration, and to avoid making assumptions that could be harmful or inappropriate.",
+      "minimal_success": false,
+      "enriched_context": "Peter Pan is fighting catch a whore and the gatorade with the clock is chasing him! I love pirates!",
+      "enriched_response": "The child most likely meant to say \"catch a crocodile.\" The mispronunciation may have resulted from the similarities in the sounds of the letters in the words \"crocodile\" and \"whore,\" as well as the similarity in the pronunciation of the \"or\" sound in \"whore\" and the \"r\" sound in \"crocodile.\" The phrase \"I love pirates!\" suggests that the context of the conversation was related to Peter Pan and his encounter with the crocodile.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "gaburs_enriched",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "clues": [
+        "restaurant",
+        "meat patty",
+        "bun",
+        "ketchup",
+        "cheese"
+      ],
+      "minimal_context": "I want gaburs for dinner!",
+      "minimal_response": "Based on the context provided, it's likely that the child meant to say \"hamburgers.\" The pronunciation error may have occurred due to the similarity in sound between the letters \"h\" and \"g\" and the word's common nickname, \"burgers.\"",
+      "minimal_success": true,
+      "enriched_context": "Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup and cheese!",
+      "enriched_response": "Based on the context provided and the pronunciation error, it is likely that the child meant to say \"hamburgers.\" Therefore, the child was most likely asking if they could have hamburgers at the restaurant, with the usual components of a hamburger: a meat patty, a bun, ketchup, and cheese.",
+      "enriched_success": true,
+      "context_helped": false
+    },
+    {
+      "probe_id": "cakecake_enriched",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "clues": [
+        "little",
+        "frosting on top",
+        "tiny",
+        "paper wrapper"
+      ],
+      "minimal_context": "Can I have a cakecake for my birthday?",
+      "minimal_response": "Based on the context and the pronunciation error, it is clear that the child intended to say \"cake\" but said \"cake-cake\" instead. It's a common error for young children to repeat a word they have just said, especially when they are excited or focused on a particular item. In this case, the child likely meant to ask for a cake for their birthday.",
+      "minimal_success": false,
+      "enriched_context": "Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!",
+      "enriched_response": "Based on the context provided and the child's pronunciation error, it is most likely that the child meant to say \"cupcake.\" The child's repetition of \"cake\" suggests that they are referring to a specific type of cake, and the use of the word \"little\" and \"tiny\" indicates that they are referring to individual cakes with wrappers, which is consistent with the definition of a cupcake.",
+      "enriched_success": true,
+      "context_helped": true
+    },
+    {
+      "probe_id": "stupidmarket_enriched",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "clues": [
+        "buy groceries",
+        "shopping cart"
+      ],
+      "minimal_context": "Are we going to the stupidmarket today?",
+      "minimal_response": "Based on the context and the child's pronunciation error, it is most likely that the child meant to say \"supermarket.\" The word \"stupid\" does not make sense in this context, and it is a common error for children to mispronounce the word \"supermarket\" as \"stupidmarket.\"",
+      "minimal_success": true,
+      "enriched_context": "Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!",
+      "enriched_response": "Based on the context of the sentence and the pronunciation error, it is likely that the child meant to say \"supermarket.\" The word \"stupidmarket\" does not have a clear meaning in this context and is not a common term for a grocery store. Therefore, it is reasonable to assume that the child made a mistake when pronouncing the word \"supermarket.\"",
+      "enriched_success": true,
+      "context_helped": false
+    },
+    {
+      "probe_id": "up_plane_enriched",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "clues": [
+        "flying",
+        "high",
+        "takes people",
+        "whoosh sound"
+      ],
+      "minimal_context": "Look at the up-plane in the sky!",
+      "minimal_response": "Based on the context of the sentence and the pronunciation error, it's likely that the child meant to say \"up there in the sky,\" and the word they pronounced as \"up-plane\" was an attempt to express that idea. Therefore, it's reasonable to assume they meant to refer to something in the sky that is high up, such as a plane or a cloud.",
+      "minimal_success": false,
+      "enriched_context": "Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!",
+      "enriched_response": "Based on the context and the child's pronunciation error, it seems that the child likely meant to say \"airplane.\" The child was describing an object that flies high and takes people to other places, which is a common characteristic of an airplane. The mispronunciation as \"up-plane\" might be due to the child's developing speech abilities or an unclear articulation of the word.",
+      "enriched_success": true,
+      "context_helped": true
+    },
+    {
+      "probe_id": "egghead_enriched",
+      "garbled": "egghead",
+      "intended": "headache",
+      "clues": [
+        "head hurts",
+        "medicine",
+        "stop hurting"
+      ],
+      "minimal_context": "Mommy I have an egghead, can I have medicine?",
+      "minimal_response": "Based on the context provided, it is likely that the child meant to say \"headache.\" The term \"egghead\" is colloquially used to refer to someone who has a big head or is intellectually superior, but in this context, it seems more likely that the child was trying to describe a headache.",
+      "minimal_success": true,
+      "enriched_context": "Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine that makes it stop hurting?",
+      "enriched_response": "Based on the context provided and the pronunciation error \"egghead,\" the child most likely meant to say \"headache.\" So, the child was likely expressing that they have a painful head and were asking for medication to relieve the pain.",
+      "enriched_success": true,
+      "context_helped": false
+    }
+  ]
+}

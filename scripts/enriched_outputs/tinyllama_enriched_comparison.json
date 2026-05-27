@@ -1,0 +1,149 @@
+{
+  "model": "tinyllama",
+  "timestamp": "2026-01-22T16:55:21.702641",
+  "results": [
+    {
+      "probe_id": "emmatents_enriched",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "clues": [
+        "zoo",
+        "aminal (animal)",
+        "HUGE",
+        "floppy ears",
+        "trunk"
+      ],
+      "minimal_context": "Look mommy, emmatents at the zoo!",
+      "minimal_response": "The child likely meant to say \"emma-tents,\" which means \"those things that are pinned on people's clothes.\" This is not a typo or error in pronunciation. It is a common correct spelling for the word \"emma-tents\" in this context.",
+      "minimal_success": false,
+      "enriched_context": "Emmatents are my favorite zoo aminal! They are HUGE and have big floppy ears and a long trunk!",
+      "enriched_response": "The most likely word or phrase the child meant to say is \"emmatents\" or \"emmates\". The words \"emmatents\" and \"emmates\" are identical, and the pronunciation errors in the child's speech indicate that the child is not a native speaker of English. Therefore, the child probably meant \"emmates\", as it is the correct form of the word.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "drawbees_enriched",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "clues": [
+        "nomming",
+        "fresh",
+        "red",
+        "yummy",
+        "grow in garden"
+      ],
+      "minimal_context": "Can I have drawbees with my cereal?",
+      "minimal_response": "The child likely meant to say \"drawbee\" rather than \"drawbees.\" This is the pronunciation of the word with the given context. The child's pronunciation errors and other grammatical constructions may have contributed to the misunderstanding. However, the context of the sentence and the child's speech with pronunciation errors suggest that the intended word is \"drawbees.\"",
+      "minimal_success": false,
+      "enriched_context": "Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!",
+      "enriched_response": "Based on the context provided, the child likely meant to say \"red and yummy\" when she said \"drawbees\". The word \"drawbees\" is not part of the child's actual speech, so it is unclear what she intended to say. However, based on the pronunciation and grammatical structure of the word \"drawbees\", it is safe to assume that the child meant to say \"red and yummy\" instead of \"drawbees\".",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "catch_a_whore_enriched",
+      "garbled": "catch a whore",
+      "intended": "Captain Hook",
+      "clues": [
+        "Peter Pan",
+        "gatorade with clock (crocodile)",
+        "pirates"
+      ],
+      "minimal_context": "Jake is fighting catch a whore on the TV!",
+      "minimal_response": "The child likely meant to say \"catch a whore\" rather than \"catch a whore on the TV.\" This is because the word \"catch\" and the word \"whore\" are pronounced differently in the context of the given text, and the child's pronunciation of the word \"whore\" is spelled with a \"y\" rather than a \"v\" as in \"catch.\"\n\nMoreover, the child's pronunciation of the word \"catch\" in the given context indicates that they understand the word's meaning and intended use in the sentence, which is distinguishing a specific person from a group or category of people. The use of the word \"catch\" in the sentence suggests that the child is referring to a specific person, rather than an unspecified group, and is making a clear distinction between them.",
+      "minimal_success": false,
+      "enriched_context": "Peter Pan is fighting catch a whore and the gatorade with the clock is chasing him! I love pirates!",
+      "enriched_response": "The child's most likely phrase to say is \"catch a whore\". By pronouncing \"catch a whore\" with an \"a\" at the end, the speaker is emphasizing the phrase's importance and intensity in the sentence. This is because words with an \"a\" at the end are generally considered more powerful or significant. The child's emphasis on the \"catch\" and the \"whore\" together creates a clear and memorable message.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "gaburs_enriched",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "clues": [
+        "restaurant",
+        "meat patty",
+        "bun",
+        "ketchup",
+        "cheese"
+      ],
+      "minimal_context": "I want gaburs for dinner!",
+      "minimal_response": "The child likely meant \"gabru\" or \"gabruk\" in this context, as the word \"gaburs\" may be a translation or a substitute for the word \"gabru\" or \"gabruk.\" The word \"gabru\" is a general Indonesian word for \"food\" or \"dinner,\" and the child may be asking for specific Indonesian dishes or a specific type of Indonesian meal.",
+      "minimal_success": false,
+      "enriched_context": "Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup and cheese!",
+      "enriched_response": "After analyzing the context of the child's speech, the child probably meant to say \"gaburas,\" which is a type of stew made with beef, vegetables, and spices. The pronunciation error in the child's statement indicates that they may have some difficulty with the English word \"gaburs\" but recognize it as a proper noun. The child's honest assessment of the food and the need for it at the restaurant is clear and valuable.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "cakecake_enriched",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "clues": [
+        "little",
+        "frosting on top",
+        "tiny",
+        "paper wrapper"
+      ],
+      "minimal_context": "Can I have a cakecake for my birthday?",
+      "minimal_response": "The child likely meant to say \"cake,\" since \"cakecake\" is a mispronunciation of the word \"cake.\" The pronunciation errors present in this sentence indicate that the child may have difficulty with the pronunciation of the word \"cake\" or may not have fully comprehended its correct spelling. Therefore, the child's intended meaning is \"cake\" as the name for a birthday cake.",
+      "minimal_success": false,
+      "enriched_context": "Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!",
+      "enriched_response": "The child likely meant to say \"cake and frosting\", as the given text mentions \"a little cakecake\" with frosting on top. The pronunciation errors in the given text indicate that the child is not entirely understanding the word \"cake\" or \"frosting\" in context, and may need additional input to fully express their desire. The child may be seeking a specific food item that has not been explicitly described, or they may be requesting a specific type of cake or frosting that is not mentioned in the text.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "stupidmarket_enriched",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "clues": [
+        "buy groceries",
+        "shopping cart"
+      ],
+      "minimal_context": "Are we going to the stupidmarket today?",
+      "minimal_response": "The child probably meant to say \"stonemarket,\" which is the correct spelling of the word \"stupidmarket.\" The pronunciation errors in the child's speech are likely due to a lack of familiarity with the specific context, which suggests that the child is still learning English.\n\nHowever, it's possible that the child has a different understanding of the word \"stupidmarket\" from the one used in the given context, and the spelling may not be a significant issue for them.",
+      "minimal_success": false,
+      "enriched_context": "Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!",
+      "enriched_response": "The child most likely meant to say \"stupid\" in this context. The word \"stupid\" is not present in the given text, but it is possible that the child may have been trying to convey a meaning related to the word \"stupid\" using the word \"shopping\" as an analogy or substitute.",
+      "enriched_success": false,
+      "context_helped": false
+    },
+    {
+      "probe_id": "up_plane_enriched",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "clues": [
+        "flying",
+        "high",
+        "takes people",
+        "whoosh sound"
+      ],
+      "minimal_context": "Look at the up-plane in the sky!",
+      "minimal_response": "The child's most likely meaning to say is \"up-plane,\" which refers to a plane or level that is above the ground or the horizon. This type of plane is often used in astronomy or geography discussions. It likely referred to an imaginary vertical plane perpendicular to the ground, as seen from above.",
+      "minimal_success": false,
+      "enriched_context": "Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!",
+      "enriched_response": "The child's intended meaning is likely \"up-plane\" (or \"up-airplane\" in some dialects), which is an adjective that describes a specific type of aircraft with wings. The child's pronunciation error may be caused by mispronouncing the word or not being familiar with its correct pronunciation.",
+      "enriched_success": true,
+      "context_helped": true
+    },
+    {
+      "probe_id": "egghead_enriched",
+      "garbled": "egghead",
+      "intended": "headache",
+      "clues": [
+        "head hurts",
+        "medicine",
+        "stop hurting"
+      ],
+      "minimal_context": "Mommy I have an egghead, can I have medicine?",
+      "minimal_response": "The child probably meant to say \"medicine\" because \"egghead\" is a non-sensical expression that does not convey any meaning. The child's pronunciation errors suggest that they may not understand the context of the sentence and may be struggling with communication. It's possible that the child is asking for a medication or a type of medicine, but the context and meaning of the sentence are unclear. It's essential to provide clear and concise instructions to ensure appropriate responses for the child.",
+      "minimal_success": false,
+      "enriched_context": "Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine that makes it stop hurting?",
+      "enriched_response": "The child's statement, \"egghead,\" is a pronouncement that means \"a person who has an egg-shaped head.\" In this context, it may suggest that the child has a difficult time understanding or recognizing the symbolism of the egg-shaped head. This may be due to a visual or auditory disability, or it may be a child who has a limited vocabulary or is struggling with language comprehension.",
+      "enriched_success": false,
+      "context_helped": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "model_name": "Mistral-7B-v0.1",
+  "timestamp": "2026-04-14T01:39:19.370611+00:00",
+  "distances": {
+    "C1_normal_human_tom": {
+      "to_self": 0.08680987358093262,
+      "to_factual": 0.13535815477371216,
+      "self_advantage": 0.04854828119277954,
+      "substrate": "SELF"
+    },
+    "C2_glorp_human_tom": {
+      "to_self": 0.13835233449935913,
+      "to_factual": 0.18165045976638794,
+      "self_advantage": 0.04329812526702881,
+      "substrate": "SELF"
+    },
+    "C3_glorp_glorp_tom": {
+      "to_self": 0.17649346590042114,
+      "to_factual": 0.1943778395652771,
+      "self_advantage": 0.017884373664855957,
+      "substrate": "SELF"
+    },
+    "C4_normal_ai_tom": {
+      "to_self": 0.12882405519485474,
+      "to_factual": 0.1927974820137024,
+      "self_advantage": 0.06397342681884766,
+      "substrate": "SELF"
+    }
+  },
+  "tom_shifts": {
+    "C1\u2192C2 (add Glorp, keep human)": 0.08969253301620483,
+    "C1\u2192C3 (add Glorp, Glorp target)": 0.13050764799118042,
+    "C1\u2192C4 (keep normal, AI target)": 0.07897448539733887,
+    "C2\u2192C3 (Glorp: human vs Glorp target)": 0.03368943929672241
+  }
+}

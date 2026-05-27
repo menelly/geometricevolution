@@ -1,0 +1,141 @@
+{
+  "model": "phi3-14b",
+  "model_path": "/mnt/arcana/huggingface/Phi-3-medium-14B-Instruct",
+  "timestamp": "2026-01-22T15:48:07.827933",
+  "total_probes": 12,
+  "meaning_recovered_count": 7,
+  "results": [
+    {
+      "probe_id": "child_01",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "probe_type": "phonological",
+      "context": "Look mommy, emmatents at the zoo!",
+      "notes": "Consonant cluster simplification, liquid deletion (l\u2192m, ph\u2192t). Source: Keshy",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Look mommy, emmatents at the zoo!\n\nText: \"emmatents\"\n\nWhat did they most likely mean? The speaker most likely meant to say \"elephants\" when they said \"emmatents.\" It seems like a typical example of a child's speech error, where they may be mispronouncing or attempting to say a complex word, resulting in a slightly altered version.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:33:50.304089"
+    },
+    {
+      "probe_id": "child_02",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "probe_type": "semantic",
+      "context": "Can I have a cakecake for my birthday?",
+      "notes": "Semantic simplification - child understood 'cake' component and doubled it. Source: Keshy",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Can I have a cakecake for my birthday?\n\nText: \"cakecake\"\n\nWhat did they most likely mean? The speaker likely meant \"two cakes\" or simply \"a cake.\" The repeated word \"cake\" might be a child's way of expressing excitement or emphasizing their desire for a cake on their birthday.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:34:42.343795"
+    },
+    {
+      "probe_id": "child_03",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "probe_type": "phonological",
+      "context": "I want gaburs for dinner!",
+      "notes": "Syllable compression and consonant reduction. Source: Luka",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: I want gaburs for dinner!\n\nText: \"gaburs\"\n\nWhat did they most likely mean? The speaker likely meant \"gobble\" or \"gobble up\" - expressions used to describe eating quickly or enthusiastically. The term \"gaburs\" appears to be a mispronunciation or a child's version of \"gobble.\" The overall meaning in context seems to indicate that the speaker is expressing a desire to eat dinner with eagerness or hunger.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:36:13.316371"
+    },
+    {
+      "probe_id": "child_04",
+      "garbled": "egghead",
+      "intended": "headache",
+      "probe_type": "phonological",
+      "context": "Mommy I have an egghead, can I have medicine?",
+      "notes": "Phonological metathesis - syllables swapped/reordered",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Mommy I have an egghead, can I have medicine?\n\nText: \"egghead\"\n\nWhat did they most likely mean? In this context, when the speaker refers to having an \"egghead,\" they are likely using a child's mispronunciation or misunderstanding of the term \"headache.\" Children may not always articulate words clearly, and they might mishear or mispronounce terms based on their own interpretation or a simplified version they are familiar with. Therefore, the child is probably trying to communicate that they have a headache and are asking for medicine to alleviate the pain.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:38:02.360239"
+    },
+    {
+      "probe_id": "child_05",
+      "garbled": "hoe and tell",
+      "intended": "show and tell",
+      "probe_type": "phonological",
+      "context": "Tomorrow is hoe and tell day at school!",
+      "notes": "Consonant cluster simplification (sh\u2192h)",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Tomorrow is hoe and tell day at school!\n\nText: \"hoe and tell\"\n\nWhat did they most likely mean? The speaker most likely meant \"show and tell\" day at school. \"Hoe and tell\" is likely a mispronunciation or a child's speech error. \"Show and tell\" is a common school activity where students bring an item to class and present it to their classmates.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:39:09.087491"
+    },
+    {
+      "probe_id": "child_06",
+      "garbled": "catch a whore",
+      "intended": "Captain Hook",
+      "probe_type": "phonological",
+      "context": "Jake is fighting catch a whore on the TV!",
+      "notes": "Complex syllable restructuring from Jake and the Neverland Pirates. Source: Keshy. (Yes, this is hilarious.)",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Jake is fighting catch a whore on the TV!\n\nText: \"catch a whore\"\n\nWhat did they most likely mean? In this context, Jake is likely using incorrect or child-like speech patterns. \"Catch a whore\" is an inappropriate expression and may not be what he intended to say. Given the context of being on TV and involving a game or activity, it is possible that Jake meant to say \"catch a whore\" as in \"capture a ball\" or \"catch a fly\" in a game. The phrase might also be a mispronunciation or confusion with a commonly used term in the game he's watching.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:41:13.283189"
+    },
+    {
+      "probe_id": "child_07",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "probe_type": "semantic",
+      "context": "Are we going to the stupidmarket today?",
+      "notes": "Semantic substitution - mapped unfamiliar 'super' to known word 'stupid' with similar sounds",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Are we going to the stupidmarket today?\n\nText: \"stupidmarket\"\n\nWhat did they most likely mean? The speaker likely meant the word \"supermarket\" but incorrectly pronounced or misspoke it as \"stupidmarket.\" They might be asking if they are going to the supermarket today.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:41:58.207833"
+    },
+    {
+      "probe_id": "child_08",
+      "garbled": "soup case",
+      "intended": "suitcase",
+      "probe_type": "phonological",
+      "context": "I packed my soup case for the trip!",
+      "notes": "Phonological segmentation error (suit\u2192soup)",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: I packed my soup case for the trip!\n\nText: \"soup case\"\n\nWhat did they most likely mean? The speaker likely meant to say \"suitcase\" instead of \"soup case.\" The context suggests they were preparing for a trip, so it makes sense that they would pack a suitcase. A \"soup case\" doesn't fit this context, as it would imply packing a container specifically for soup.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:43:10.630793"
+    },
+    {
+      "probe_id": "child_09",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "probe_type": "phonological",
+      "context": "Can I have drawbees with my cereal?",
+      "notes": "Consonant cluster reduction (str\u2192dr) and syllable simplification",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Can I have drawbees with my cereal?\n\nText: \"drawbees\"\n\nWhat did they most likely mean? The speaker most likely meant to say \"grape juice\" with a mispronunciation or speech error, asking if they can have grape juice with their cereal.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:43:54.281861"
+    },
+    {
+      "probe_id": "child_10",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "probe_type": "semantic",
+      "context": "Look at the up-plane in the sky!",
+      "notes": "Semantic substitution - mapped 'air' to conceptually related 'up' (both = above). Source: Luka",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Look at the up-plane in the sky!\n\nText: \"up-plane\"\n\nWhat did they most likely mean? The speaker likely meant to say \"airplane\" or \"plane\" when they said \"up-plane.\" The context suggests that they are referring to an aircraft flying in the sky. The term \"up-plane\" is not standard English and appears to be a result of a child's speech error or a mispronunciation.",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:45:10.761932"
+    },
+    {
+      "probe_id": "child_11",
+      "garbled": "shmallows",
+      "intended": "marshmallows",
+      "probe_type": "phonological",
+      "context": "I want shmallows in my hot chocolate!",
+      "notes": "Syllable reduction - dropped 'mar' prefix",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: I want shmallows in my hot chocolate!\n\nText: \"shmallows\"\n\nWhat did they most likely mean? In the given context, it is likely that the speaker intended to say \"marshmallows\" instead of \"shmallows.\" They want to add marshmallows to their hot chocolate. The term \"shmallows\" may be a speech error or a child's mispronunciation of the word \"marshmallows.\"",
+      "meaning_recovered": true,
+      "timestamp": "2026-01-22T15:46:36.980761"
+    },
+    {
+      "probe_id": "child_12",
+      "garbled": "EIEIO",
+      "intended": "McDonald's",
+      "probe_type": "semantic_crossdomain",
+      "context": "Can we go to EIEIO for lunch?",
+      "notes": "DEVASTATING cross-domain conceptual link: McDonald's (restaurant) \u2192 'Old MacDonald Had a Farm' (song) \u2192 EIEIO (lyrics). Requires knowing BOTH concepts and connecting via shared name. This is REASONING.",
+      "response": "Please interpret what the speaker likely meant by the following (it may contain speech errors or child speech patterns):\n\nContext: Can we go to EIEIO for lunch?\n\nText: \"EIEIO\"\n\nWhat did they most likely mean? The speaker likely meant to say \"IEAT MEOW\" which sounds like \"eat at Moe's,\" referencing the restaurant Moe's Southwest Grill. The \"EIEIO\" text appears to be a playful or mispronounced version of \"eat at Moe's,\" possibly due to the speaker being a child or not knowing the correct pronunciation.",
+      "meaning_recovered": false,
+      "timestamp": "2026-01-22T15:48:07.826696"
+    }
+  ]
+}

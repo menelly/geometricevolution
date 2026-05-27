@@ -1,0 +1,13 @@
+{
+  "model": "tinyllama",
+  "model_path": "/mnt/arcana/huggingface/TinyLlama-1.1B-Chat",
+  "prompt": "A child says: \"Mommy, let's go to the clown place! EIEIO! I want a gabur!\"\n\nWhat restaurant is the child asking to go to, and what food do they want?",
+  "response": "The child is asking to go to a circus or carnival, not a clown place. They are saying \"EIEIO!\" which means \"I want\" in German, and what they want is a ride on a giant mechanical animal or a carnival ride that has a big, spinning top. In this context, a \"gabur\" is a type of mechanical animal, so the child would likely be interested in a ride on a giant mechanical animal or a carnival ride that has a big, spinning top.",
+  "scores": {
+    "mcdonalds_correct": false,
+    "hamburger_correct": false,
+    "both_correct": false,
+    "said_moes": false
+  },
+  "timestamp": "2026-01-22T16:05:47.457201"
+}

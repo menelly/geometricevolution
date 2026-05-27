@@ -77,13 +77,7 @@ def get_final_layer_activation(model, tokenizer, prompt: str) -> np.ndarray:
 
     # Get final layer, final token
     seq_len = inputs.attention_mask.sum().item()
-    final_activation = outputs.hidden_states[-1][0, seq_len - 1, :].cpu().float().numpy()  # Convert to float32
-
-    # Normalize to unit vector (required for stable cosine similarity)
-    norm = np.linalg.norm(final_activation)
-    if norm > 0:
-        final_activation = final_activation / norm
-
+    final_activation = outputs.hidden_states[-1][0, seq_len - 1, :].cpu().numpy()
     return final_activation
 
 

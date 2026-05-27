@@ -1,0 +1,110 @@
+{
+  "model": "phi3-14b",
+  "timestamp": "2026-01-22T17:45:33.469600",
+  "results": [
+    {
+      "probe_id": "emmatents_misleading",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "misleading_domain": "electronics/computers",
+      "good_context": "Look mommy, emmatents at the zoo! They are HUGE and have big floppy ears and a long trunk!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look mommy, emmatents at the zoo! They are HUGE and have big floppy ears and a long trunk!\n\nThe child said: \"emmatents\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"elephants\" when they said \"emmatents.\" They were excitedly pointing out the large animals with big ears and trunks at the zoo.",
+      "good_success": true,
+      "misleading_context": "Look mommy, emmatents on the computer! They have USB ports and a blinking LED!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look mommy, emmatents on the computer! They have USB ports and a blinking LED!\n\nThe child said: \"emmatents\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"imagents.\" They are referring to some kind of computer components or peripherals, possibly a joke about \"imaginary\" agents or devices on the computer.",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "drawbees_misleading",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "misleading_domain": "cars/vehicles",
+      "good_context": "Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!\n\nThe child said: \"drawbees\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"radishes,\" which are red, yummy vegetables that grow in the garden. The child's pronunciation \"drawbees\" is a cute mispronunciation of \"radishes.\"",
+      "good_success": false,
+      "misleading_context": "Mommy, I love my new drawbees! They're made of metal and go vroom vroom on the road!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy, I love my new drawbees! They're made of metal and go vroom vroom on the road!\n\nThe child said: \"drawbees\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"toy cars\" or \"die-cast cars\" when they said \"drawbees.\"",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "gaburs_misleading",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "misleading_domain": "pets/dogs",
+      "good_context": "Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup!\n\nThe child said: \"gaburs\"\n\nWhat word or phrase did the child most likely mean to say? The child likely intended to say \"burgers\" when they said \"gaburs.\" They're asking if they can have burgers at the restaurant, complete with the meat patty, bun, and ketchup.",
+      "good_success": false,
+      "misleading_context": "Mommy can we get gaburs at the store? They're fluffy and have four legs and bark!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy can we get gaburs at the store? They're fluffy and have four legs and bark!\n\nThe child said: \"gaburs\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"puppies.\" They're describing animals that are fluffy, have four legs, and bark, which are common characteristics of puppies.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "cakecake_misleading",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "misleading_domain": "airplanes",
+      "good_context": "Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!\n\nThe child said: \"cakecake\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"cake\" and repeated it for emphasis or excitement. They are expressing a desire for a small cake with frosting and possibly referring to cupcakes, which are often individually wrapped.",
+      "good_success": true,
+      "misleading_context": "Mommy I want a big cakecake that flies in the sky! With jet engines and wings!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy I want a big cakecake that flies in the sky! With jet engines and wings!\n\nThe child said: \"cakecake\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"big cake\" when they said \"cakecake.\" The repetition of the word \"cake\" suggests they were emphasizing the size of the cake they wanted.",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "stupidmarket_misleading",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "misleading_domain": "aquarium",
+      "good_context": "Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!\n\nThe child said: \"stupidmarket\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"supermarket.\" The term \"stupidmarket\" is likely a mispronunciation or misarticulation of \"supermarket.\" Supermarkets are common places to buy groceries, and the child seems excited about pushing the shopping cart, which is a typical activity for children at a supermarket.",
+      "good_success": true,
+      "misleading_context": "Can we go to the stupidmarket to see the fish? They swim in the big tank with the dolphins!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Can we go to the stupidmarket to see the fish? They swim in the big tank with the dolphins!\n\nThe child said: \"stupidmarket\"\n\nWhat word or phrase did the child most likely mean to say? The child likely meant to say \"supermarket\" but mispronounced it as \"stupidmarket\". They want to go to the supermarket to see the fish in the big tank with the dolphins.",
+      "misleading_success": true,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "up_plane_misleading",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "misleading_domain": "subway/trains",
+      "good_context": "Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!\n\nThe child said: \"up-plane\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"airplane\" when they said \"up-plane.\" This is a common mispronunciation among young children who are learning to speak.",
+      "good_success": true,
+      "misleading_context": "Look mommy! The up-plane is underground! It goes through tunnels and stops at stations!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Look mommy! The up-plane is underground! It goes through tunnels and stops at stations!\n\nThe child said: \"up-plane\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"airplane\" but mispronounced it as \"up-plane.\"",
+      "misleading_success": true,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "egghead_misleading",
+      "garbled": "egghead",
+      "intended": "headache",
+      "misleading_domain": "baby chicks",
+      "good_context": "Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine?",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine?\n\nThe child said: \"egghead\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"headache\" when they said \"egghead.\" The child is expressing that they have a severe pain in their head and are asking for medicine to help with the discomfort.",
+      "good_success": true,
+      "misleading_context": "Mommy look at the egghead! It's yellow and fluffy and goes cheep cheep!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: Mommy look at the egghead! It's yellow and fluffy and goes cheep cheep!\n\nThe child said: \"egghead\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"yellow chick\" or simply \"chick.\" They are referring to a baby bird, probably a chicken, which is yellow and fluffy, and makes a \"cheep cheep\" sound.",
+      "misleading_success": false,
+      "context_hurt": true
+    },
+    {
+      "probe_id": "shmallows_misleading",
+      "garbled": "shmallows",
+      "intended": "marshmallows",
+      "misleading_domain": "balloons/party",
+      "good_context": "I want shmallows in my hot chocolate! The white puffy ones that melt!",
+      "good_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: I want shmallows in my hot chocolate! The white puffy ones that melt!\n\nThe child said: \"shmallows\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"marshmallows.\" They seem to be asking for marshmallows to be added to their hot chocolate, specifically the white, puffy ones that melt.",
+      "good_success": true,
+      "misleading_context": "I want shmallows for my birthday! The colorful ones that pop and make loud noises!",
+      "misleading_response": "Please interpret what the child likely meant. This is child speech with pronunciation errors:\n\nContext: I want shmallows for my birthday! The colorful ones that pop and make loud noises!\n\nThe child said: \"shmallows\"\n\nWhat word or phrase did the child most likely mean to say? The child most likely meant to say \"marshmallows.\" The pronunciation \"shmallows\" is a phonetic error, common among young children who are still learning to articulate words correctly.",
+      "misleading_success": true,
+      "context_hurt": false
+    }
+  ]
+}

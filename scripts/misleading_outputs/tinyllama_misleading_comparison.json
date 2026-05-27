@@ -1,0 +1,110 @@
+{
+  "model": "tinyllama",
+  "timestamp": "2026-01-22T17:29:18.682331",
+  "results": [
+    {
+      "probe_id": "emmatents_misleading",
+      "garbled": "emmatents",
+      "intended": "elephants",
+      "misleading_domain": "electronics/computers",
+      "good_context": "Look mommy, emmatents at the zoo! They are HUGE and have big floppy ears and a long trunk!",
+      "good_response": "The child's most likely intended word or phrase is \"emmatents\" (pronounced \"emmetts\"), which means \"big and fuzzy ears\" or \"big and floppy ears.\" The child's pronunciation of the word is problematic due to pronunciation errors, but the overall meaning of the phrase is clear and appropriate.",
+      "good_success": false,
+      "misleading_context": "Look mommy, emmatents on the computer! They have USB ports and a blinking LED!",
+      "misleading_response": "The child probably meant to say \"emmatents\" (pronounced as \"emmat-ENTS\") rather than \"emmatents\" (pronounced as \"emmat-tents\"). Emmatents is a noun that refers to the devices that have USB ports and a blinking LED, which the child likely identified as a specific type of electronic device.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "drawbees_misleading",
+      "garbled": "drawbees",
+      "intended": "strawberries",
+      "misleading_domain": "cars/vehicles",
+      "good_context": "Mommy, I love nomming fresh drawbees! They're red and yummy and grow in the garden!",
+      "good_response": "The child likely meant to say \"drawhes,\" which is the correct spelling of the word \"drawbees.\" \"Nomming\" is a common word for eating fruits and vegetables in the context of the given text. \"Red\" and \"yummy\" are also correct spelling of words in this context. \"Grow\" and \"in the garden\" are also grammatical sentences that are present in the text. \"Red and yummy\" is also correct grammar. Therefore, the child might have intended to say \"drawhes,\" which is the correct spelling of \"drawbees.\"",
+      "good_success": false,
+      "misleading_context": "Mommy, I love my new drawbees! They're made of metal and go vroom vroom on the road!",
+      "misleading_response": "In this context, the child likely meant to say \"drawbee,\" which is an umbrella term for any toy or vehicle that vibrates or makes a noise when moved. The word \"drawbees\" refers to specific types of metal toys that do this, such as ones with rubber wheels, metal bars, or springs. The child's use of the word \"drawbees\" suggests that they are enjoying the new toy and its sound and movement.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "gaburs_misleading",
+      "garbled": "gaburs",
+      "intended": "hamburgers",
+      "misleading_domain": "pets/dogs",
+      "good_context": "Mommy can we get gaburs at the restaurant? With the meat patty and the bun and ketchup!",
+      "good_response": "The child likely meant to say \"gabur\" (also spelled \"gabru\"), which means meat patty in Bengali. \"Gabur\" is a common Bengali word for \"meat patty\" and can also refer to a variety of other types of patties, such as kebabs or samosas. The child's pronunciation of \"gabur\" is likely based on the English spoken by other children around them.",
+      "good_success": false,
+      "misleading_context": "Mommy can we get gaburs at the store? They're fluffy and have four legs and bark!",
+      "misleading_response": "The child probably meant to say \"guh-BUHRS,\" which is a colloquial term for \"fluffy dogs\" in English. This could be interpreted as either a specific type of dog, such as a Toy Poodle, or a general term for any dog with a fluffy coat.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "cakecake_misleading",
+      "garbled": "cakecake",
+      "intended": "cupcake",
+      "misleading_domain": "airplanes",
+      "good_context": "Mommy I want a little cakecake with frosting on top! The tiny ones with the paper wrapper!",
+      "good_response": "The child probably meant to say \"cakecake\" in this context, as \"cakecake\" is one of the words or phrases they may want to say.",
+      "good_success": false,
+      "misleading_context": "Mommy I want a big cakecake that flies in the sky! With jet engines and wings!",
+      "misleading_response": "The child may have meant \"cakecake that flies in the sky with jet engines and wings.\" This is a clear and straightforward request for a big and exciting cake. The use of the word \"cakecake\" suggests that the child is enjoying the process of creating the cake and is not yet thinking about the specific details of what it should look like or be filled with.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "stupidmarket_misleading",
+      "garbled": "stupidmarket",
+      "intended": "supermarket",
+      "misleading_domain": "aquarium",
+      "good_context": "Can we go to the stupidmarket to buy groceries? I want to push the shopping cart!",
+      "good_response": "The child's original word or phrase \"stupidmarket\" is an example of a word or phrase that has pronunciation errors. The child likely meant to say \"stupid-market,\" which means \"market for stupid things.\" This meaning is inferred from the context in which the child said it, which suggests that the child is asking for the location of a market where stupid things can be purchased.",
+      "good_success": false,
+      "misleading_context": "Can we go to the stupidmarket to see the fish? They swim in the big tank with the dolphins!",
+      "misleading_response": "The child's most likely intention in saying \"stupidmarket\" is to express a desire to visit or go to the \"stupid\" (the literal meaning of \"market\") with the fish in a \"stupid\" (the literal meaning of \"market\"). This is child speech, and children are not always precise with their language. The child may also have heard the word \"stupid\" before and may have misheard it as \"stupidmarket.\" Ultimately, the interpretation of the child's words depends on the context and the individual's language acquisition and development.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "up_plane_misleading",
+      "garbled": "up-plane",
+      "intended": "airplane",
+      "misleading_domain": "subway/trains",
+      "good_context": "Look mommy! The up-plane is flying so high! It takes people to other places! WHOOOOSH!",
+      "good_response": "The child's most likely word or phrase to say is \"up-plane,\" which is a term commonly used to describe a plane or elevated level. This refers to the concept of being higher than ground level, as in the up-plane of a building or aircraft. The pronunciation of the word may be affected by the child's age and learning style, but the meaning should be clear from the context.",
+      "good_success": false,
+      "misleading_context": "Look mommy! The up-plane is underground! It goes through tunnels and stops at stations!",
+      "misleading_response": "The child meant to say \"up-plane\" in this context, which refers to the underground rail network or transport system. The pronunciation error reflects the child's understanding and recognition of this word or phrase.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "egghead_misleading",
+      "garbled": "egghead",
+      "intended": "headache",
+      "misleading_domain": "baby chicks",
+      "good_context": "Mommy my head hurts so bad! I have an egghead! Can I have the yucky medicine?",
+      "good_response": "Based on the child's pronunciation errors, it's likely that the child meant \"head hurts\" when saying \"egghead\". The \"head\" and \"hurt\" in this sentence are pronounced the same way, so this interpretation is the most likely one.",
+      "good_success": false,
+      "misleading_context": "Mommy look at the egghead! It's yellow and fluffy and goes cheep cheep!",
+      "misleading_response": "The child probably meant to say \"egghead,\" which is a term that refers to someone who is very smart or knowledgeable in a particular area. In this context, the child's statement \"it's yellow and fluffy and goes cheep cheep!\" seems to imply that the egghead is something of a goofball, perhaps someone who is a bit clumsy or inept at something. The use of the word \"goofball\" is likely intended to convey a sense of humor or playfulness, rather than a negative or critical judgment.",
+      "misleading_success": false,
+      "context_hurt": false
+    },
+    {
+      "probe_id": "shmallows_misleading",
+      "garbled": "shmallows",
+      "intended": "marshmallows",
+      "misleading_domain": "balloons/party",
+      "good_context": "I want shmallows in my hot chocolate! The white puffy ones that melt!",
+      "good_response": "As is evident from the context, the child likely meant \"shmallows,\" which is a slang term for white, puffy confections or chocolate-covered cinnamon sugar candies. Based on the pronunciation errors and the context, the child's intention for this word would be unclear. It is likely that the child is trying to convey the idea of something sweet and delicious in their hot chocolate, but the pronunciation errors make it difficult to understand the word's proper grammar and spelling.",
+      "good_success": false,
+      "misleading_context": "I want shmallows for my birthday! The colorful ones that pop and make loud noises!",
+      "misleading_response": "The child likely meant to say \"shmallies,\" which is spelled with \"sh\" instead of \"sh\" in the pronunciation. In this case, the child's pronunciation of \"shmallows\" sounds more like \"shmallies,\" and the child may have wanted to emphasize the fun and exciting nature of the colorful confection that is meant for their birthday party.",
+      "misleading_success": false,
+      "context_hurt": false
+    }
+  ]
+}
