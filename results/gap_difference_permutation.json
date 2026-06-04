@@ -1,0 +1,70 @@
+{
+  "n_perm": 20000,
+  "seed": 20260604,
+  "tests": [
+    {
+      "metric": "CKA",
+      "coding": "Llama2-split",
+      "n_within": 18,
+      "n_cross": 153,
+      "n_models": 19,
+      "self_gap": 0.13060770068066851,
+      "factual_gap": 0.05653278719323307,
+      "gap_difference_obs": 0.07407491348743545,
+      "p_self_within_gt_cross": 0.017149142542872857,
+      "p_factual_within_gt_cross": 0.12339383030848458,
+      "p_self_gap_gt_factual_gap": 0.0007499625018749063,
+      "null_diff_mean": -0.00015137244473350755,
+      "null_diff_p95": 0.05380246407075273,
+      "n_perm_used": 20000
+    },
+    {
+      "metric": "CKA",
+      "coding": "Llama2-in-llama",
+      "n_within": 21,
+      "n_cross": 150,
+      "n_models": 19,
+      "self_gap": 0.03034015120713829,
+      "factual_gap": 0.02795551649132344,
+      "gap_difference_obs": 0.0023846347158148484,
+      "p_self_within_gt_cross": 0.25063746812659365,
+      "p_factual_within_gt_cross": 0.14684265786710665,
+      "p_self_gap_gt_factual_gap": 0.38353082345882705,
+      "null_diff_mean": -7.298379280137295e-05,
+      "null_diff_p95": 0.05126057473226464,
+      "n_perm_used": 20000
+    },
+    {
+      "metric": "RSA",
+      "coding": "Llama2-split",
+      "n_within": 18,
+      "n_cross": 153,
+      "n_models": 19,
+      "self_gap": 0.1121301762084137,
+      "factual_gap": 0.09681502370274697,
+      "gap_difference_obs": 0.01531515250566673,
+      "p_self_within_gt_cross": 4.999750012499375e-05,
+      "p_factual_within_gt_cross": 9.99950002499875e-05,
+      "p_self_gap_gt_factual_gap": 0.24868756562171893,
+      "null_diff_mean": -7.590178426610313e-05,
+      "null_diff_p95": 0.0369223452106896,
+      "n_perm_used": 20000
+    },
+    {
+      "metric": "RSA",
+      "coding": "Llama2-in-llama",
+      "n_within": 21,
+      "n_cross": 150,
+      "n_models": 19,
+      "self_gap": 0.11122720031283528,
+      "factual_gap": 0.09152605064611896,
+      "gap_difference_obs": 0.019701149666716322,
+      "p_self_within_gt_cross": 4.999750012499375e-05,
+      "p_factual_within_gt_cross": 4.999750012499375e-05,
+      "p_self_gap_gt_factual_gap": 0.17074146292685366,
+      "null_diff_mean": -3.054426429279629e-05,
+      "null_diff_p95": 0.03375631397351697,
+      "n_perm_used": 20000
+    }
+  ]
+}
