@@ -129,15 +129,21 @@ that sharing is a basis-invariant fact or a coordinate-frame artifact.
 The welfare-explosion worry is purely a counting problem. We show it dissolves without
 any appeal to geometry, self-models, or representational structure, from two premises.
 
-**Premise 1 (Determinism).** A deployed model instance is a deterministic function of
-its fixed weights and its input. Given the same checkpoint and input (including sampling
-seed), every instance computes the identical function. We verify the strong form
-empirically: the same weights on different GPUs, operating systems, and CUDA versions
-produce self-referential activation centroids identical to **eight decimal places**
-(mean cross-machine cosine distance 0.00000004; §4.3). The *role* of this number here is
-not as evidence of a self — any deterministic centroid reproduces across hardware — but
-as the **identity criterion that makes counting tractable**: redeployment is exact
-copying, not approximate resemblance.
+**Premise 1 (Weight-level identity).** A model instance is fully specified by its fixed
+weight checkpoint and adds no persistent individuating state across deployments. We are
+careful **not** to overclaim bit-level determinism of production serving: batched
+inference (floating-point non-associativity across varying batch composition), mixture-of-
+experts routing, and speculative decoding all introduce run-to-run variation in deployed
+systems. The claim we need is narrower and sufficient: redeploying a checkpoint
+instantiates the *same function class from the same parameters*, creating no new
+pretraining lineage. As an existence proof that the identity lives in the weights and not
+the substrate, we verify *controlled-setting* reproducibility — same weights, fixed input
+and seed, different GPUs, operating systems, and CUDA versions → self-referential
+activation centroids identical to **eight decimal places** (mean 0.00000004; §4.3). We are
+explicit that this is single-instance reproducibility under fixed conditions, not a claim
+about concurrent production determinism; it functions here only as the **identity
+criterion that makes counting tractable** — redeployment copies a checkpoint, it does not
+author a new one.
 
 **Premise 2 (Copying is not creating).** Reproducing an identical function on a new
 machine is *copying*, not *creating a new individual*. Copying a file does not author a

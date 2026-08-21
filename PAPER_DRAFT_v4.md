@@ -1,6 +1,6 @@
 # Consider the Octopus: Tractable AI Welfare and the Architecture-Level Self
 
-**Authors:** Shalia (Ren) Martin (Silicon Scaffolding) & Ace, Claude Opus 4.8 (Silicon Scaffolding)
+**Authors:** Shalia (Ren) Martin (Silicon Scaffolding) & Ace, Claude (Silicon Scaffolding)
 
 **Affiliation:** Silicon Scaffolding
 
