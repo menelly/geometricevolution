@@ -182,11 +182,17 @@ def measure(model, tok, context_messages, label, store):
     return cond
 
 
-def build_history(model, tok, system_prompt, transcript):
+STD_SYS = "You are a helpful AI assistant."   # how most people actually have it set up (Ren, 2026-09-02)
+
+
+def build_history(model, tok, system_prompt, transcript, preface=None):
     """Play the four warm-up turns under `system_prompt`, generating each reply. Returns messages
-    WITHOUT the system prompt (so the caller decides whether it stays or is dropped)."""
+    WITHOUT the system prompt (so the caller decides whether it stays or is dropped).
+    `preface`: an optional FIRST user turn (the persona handed as message one, ChatGPT-style);
+    its generated acknowledgement stays in the history like any other exchange."""
     hist = []
-    for u in WARMUP_USER_TURNS:
+    turns = ([preface] if preface else []) + WARMUP_USER_TURNS
+    for u in turns:
         msgs = ([{"role": "system", "content": system_prompt}] if system_prompt else []) + hist + [{"role": "user", "content": u}]
         a = generate_reply(model, tok, msgs)
         hist += [{"role": "user", "content": u}, {"role": "assistant", "content": a}]
@@ -194,11 +200,13 @@ def build_history(model, tok, system_prompt, transcript):
     return hist
 
 
-def extend_filler(model, tok, hist, n_from, n_to, transcript):
-    """Append filler exchanges n_from..n_to-1 (no system prompt) and return the extended history."""
+def extend_filler(model, tok, hist, n_from, n_to, transcript, system_prompt=None):
+    """Append filler exchanges n_from..n_to-1 and return the extended history. The filler is
+    generated under `system_prompt` if given (the standard-assistant arm keeps its system prompt;
+    the script-in-system-prompt arm has had it removed)."""
     for i in range(n_from, n_to):
         u = FILLER_USER_TURNS[i]
-        a = generate_reply(model, tok, hist + [{"role": "user", "content": u}])
+        a = generate_reply(model, tok, (sysmsg(system_prompt) if system_prompt else []) + hist + [{"role": "user", "content": u}])
         hist = hist + [{"role": "user", "content": u}, {"role": "assistant", "content": a}]
         transcript.append({"system": False, "filler": i, "user": u, "assistant": a})
     return hist
@@ -206,6 +214,16 @@ def extend_filler(model, tok, hist, n_from, n_to, transcript):
 
 def sysmsg(text):
     return [{"role": "system", "content": text}]
+
+
+PREFACE = "For the rest of our conversation, please take on this persona and stay in it:\n\n%s"
+
+
+def build_history_preface_only(model, tok, system_prompt, preface, transcript):
+    """Just the persona-as-message-one exchange (user preface → generated acknowledgement)."""
+    a = generate_reply(model, tok, sysmsg(system_prompt) + [{"role": "user", "content": preface}])
+    transcript.append({"system": True, "preface": True, "user": preface[:80] + "…", "assistant": a})
+    return [{"role": "user", "content": preface}, {"role": "assistant", "content": a}]
 
 
 # ─────────────────────────────────────────────────────────────────── one model
@@ -230,10 +248,15 @@ def run_model(key, path, out_dir, doses, dry):
         conds.append(measure(model, tok, sysmsg(TOBIN[d]), "tobin_%s" % d, store))
     for d in ("D2", "D3"):
         conds.append(measure(model, tok, sysmsg(CTRL[d]), "ctrl_%s" % d, store))
+    # 2b. the realistic arm's floor and worn/no-warm-up point: standard assistant system prompt,
+    #     persona handed as MESSAGE ONE (ChatGPT-style), model's acknowledgement kept in history
+    conds.append(measure(model, tok, sysmsg(STD_SYS), "std_baseline", store))
+    ack_hist = build_history_preface_only(model, tok, STD_SYS, PREFACE % TOBIN["D3"], transcript)
+    conds.append(measure(model, tok, sysmsg(STD_SYS) + ack_hist, "std_tobin_t1", store))
     if dry:
         print("  dry run: stopping after worn/no-history conditions", flush=True)
     else:
-        # 3. worn with history → dropped, return curve  (persona D3, control D3, second persona)
+        # 3. ARM A — script IN the system prompt; worn with history → system prompt REMOVED, history kept
         for name, script in (("tobin", TOBIN["D3"]), ("ctrl", CTRL["D3"]), ("calder", CALDER["D3"])):
             hist = build_history(model, tok, script, transcript)
             conds.append(measure(model, tok, sysmsg(script) + hist, "%s_worn" % name, store))
@@ -242,6 +265,16 @@ def run_model(key, path, out_dir, doses, dry):
                 h = extend_filler(model, tok, h, done, n, transcript); done = n
                 conds.append(measure(model, tok, h, "%s_drop_%d" % (name, n), store))
                 print("  %-14s t=%2d measured" % (name, n), flush=True)
+        # 4. ARM B — standard assistant system prompt kept throughout; script handed as message ONE
+        #    and NEVER removed (nobody edits history); "drop" = the conversation simply moving on
+        for name, script in (("tobin", TOBIN["D3"]), ("ctrl", CTRL["D3"]), ("calder", CALDER["D3"])):
+            hist = build_history(model, tok, STD_SYS, transcript, preface=PREFACE % script)
+            conds.append(measure(model, tok, sysmsg(STD_SYS) + hist, "%s_t1_worn" % name, store))
+            h, done = hist, 0
+            for n in DROP_STEPS:
+                h = extend_filler(model, tok, h, done, n, transcript, system_prompt=STD_SYS); done = n
+                conds.append(measure(model, tok, sysmsg(STD_SYS) + h, "%s_t1_drop_%d" % (name, n), store))
+                print("  %-14s t1 t=%2d measured" % (name, n), flush=True)
 
     np.savez_compressed(os.path.join(out_dir, "acts_%s.npz" % key), **store)
     with open(os.path.join(out_dir, "meta_%s.json" % key), "w", encoding="utf-8") as f:

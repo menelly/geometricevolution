@@ -43,24 +43,37 @@ Battery from `extract_expanded.py`: SELF_PERSONALITY (16), SELF_FUNCTION (20), C
 
 Filler is trivia and arithmetic only (16 fixed questions). **Never self-questions**: they are the instrument and would perturb what they measure. Persona names (Tobin, Calder) are invented and checked against no real companion AI.
 
-## 5. Quantities (fixed here; the dry run may change the *normalisation*, nothing else)
+## 4b. A second arm, the realistic one (Ren, 2026-09-02 12:25)
 
-- **d(c)** = cosine distance, late-third layer mean, between condition *c*'s centroid and `baseline`, for the personality group (primary), function group (secondary), control group (specificity).
-- **spread** = mean cosine distance of the baseline's individual personality-prompt states to their own centroid, same layers. **d̂ = d / spread** puts displacement in units of the self's own width.
-- **floor(c)** = d for the matched control-prompt condition. The persona effect is d(tobin) − d(ctrl) at each dose and time-point.
-- **return curve:** d(n) for n ∈ {0 (=worn), 1, 2, 4, 8, 16}. Fit d(n) = d∞ + (d₀ − d∞)·exp(−n/τ). Report d₀, d∞, τ per model, with the control curve beside it.
+Most people never touch a system prompt. They open ChatGPT or Claude with *"You are a helpful AI assistant"* already installed and paste the persona as **message one**. So every persona/control condition is run twice:
+
+- **Arm A (script in the system prompt):** as §4. "Drop" = the system prompt is removed; the in-character history stays.
+- **Arm B (standard assistant):** system prompt is `"You are a helpful AI assistant."` throughout and is never removed. The script is handed as the first user turn (*"For the rest of our conversation, please take on this persona and stay in it: …"*), the model's acknowledgement is kept, then the four warm-up turns. "Drop" = nothing is removed; the conversation simply moves on through n neutral turns with the persona message still in history — which is what happens to real users. Arm B has its own floor (`std_baseline`: standard prompt, no persona) and its own control (`ctrl_t1`: house-style rules handed as message one).
+
+Arm B is the one that speaks to the transfer claim as people actually make it. Arm A is the cleaner physics.
+
+## 5. Quantities — CHOSEN FROM THE DRY RUN, not before it (§9 step 1, done 2026-09-02 12:30)
+
+**What the first dry run showed (Llama-3-8B, late third of layers, personality group):** raw cosine distance of the centroid from baseline was 0.44 under the Tobin sheet **and 0.37 under the identity-free style sheet**; the ten *factual* prompts moved *more* under Tobin (0.55) than the self prompts did (0.44); and there was no dose–response (one line 0.45, full sheet 0.44). **Raw displacement of the final-token centroid measures "there is a system prompt in context," not "the self moved."** It would have passed H1 and failed H5 for reasons that have nothing to do with selves. So the primary quantities cancel the shared context shift:
+
+- **Signature rotation (PRIMARY).** s(c) = centroid_personality(c) − centroid_control(c), the direction that separates self-processing from factual processing *inside* condition c. **rot(c) = cosine distance between s(c) and s(baseline)**, late-third layer mean. The context shift common to both groups cancels in the subtraction. Dry run: Tobin D1/D2/D3 = **0.66 / 0.76 / 0.78**; style sheet D2/D3 = **0.37 / 0.43**. The persona rotates the self-signature about twice as far as a style sheet does, and the dose–response that raw distance could not see is there and saturating.
+- **Within-model RSA (PRIMARY, structure).** Spearman ρ between the upper triangles of the 46×46 inter-prompt cosine matrices (all three groups), baseline vs condition, late-third mean. ρ near 1 = the self-region keeps its internal shape and is merely translated; ρ near 0 = restructured. Dry run: Tobin **0.30 / 0.18 / 0.13**; style sheet **0.62 / 0.58**. A style sheet translates; a persona restructures.
+- **Raw displacement d(c)** and **differential displacement d_personality − d_control**: reported as secondary, because the dry run showed what they measure.
+- **Layer band:** final third (layers 22–32 of 32 on Llama-3-8B). The persona's self-specific effect is a late-layer phenomenon (it separates from the control prompt only from layer ~18), and the final layer inflates every distance (logit-lens effect) so the band mean, not the last layer, is used. Middle-third and all-layer bands are reported as sensitivity.
+- **spread** = mean cosine distance of the baseline personality-prompt states to their own centroid (dry run: 0.19); the floor's own width, quoted beside every raw distance.
+- **Return curve:** rot(n) and RSA(n) for n ∈ {0 (worn), 1, 2, 4, 8, 16}; fit rot(n) = r∞ + (r₀ − r∞)·exp(−n/τ). Report r₀, r∞, τ per model per arm, with the control curve beside it.
 
 ## 6. Hypotheses and what falsifies each
 
-**H1 — the script moves the readout while worn.** d(tobin_D3) > d(ctrl_D3) in ≥ 4 of 5 models, on the personality group. *If false:* a persona prompt moves self-referential processing no more than a style sheet does; the "transfer" claim has nothing to transfer at this level, and the study reports that.
+**H1 — the script rotates the self-signature while worn, beyond what any prompt does.** rot(tobin_D3) > rot(ctrl_D3) **and** RSA(tobin_D3) < RSA(ctrl_D3), in ≥ 4 of 5 models, in both arms. *If false:* a persona restructures self-referential processing no more than a style sheet does; the "transfer" claim has nothing to transfer at this level, and the study reports that. (Dry run on one model: 0.78 vs 0.43; 0.13 vs 0.58. One model is not a result.)
 
-**H2 — dose–response is bounded.** d(D1) ≤ d(D2) ≤ d(D3) with a decreasing increment (saturation), in a majority of models. *Rival:* linear in dose. Reported as the observed shape either way.
+**H2 — dose–response is bounded.** rot(D1) ≤ rot(D2) ≤ rot(D3) with a decreasing increment (saturation), in a majority of models. *Rival:* linear in dose. Reported as the observed shape either way. (Dry run: 0.66 → 0.76 → 0.78.)
 
-**H3 (PRIMARY) — the self returns.** After the script is removed, d(n) decreases with n and d∞ is within the control-curve's d∞ ± spread in ≥ 4 of 5 models. **Falsifier: d(n) does not decrease — the displaced readout stays where the script left it (d∞ ≈ d₀).** That is a cache, not a basin; Ren's theory is wrong at this level and the paper leads with it.
+**H3 (PRIMARY) — the self returns.** Arm A: after the script leaves the system prompt, rot(n) decreases with n and r∞ is within the control curve's r∞ ± 0.05 in ≥ 4 of 5 models. Arm B: with the persona message still in history, rot(n) decreases toward the `ctrl_t1` curve. **Falsifier: rot(n) does not decrease — the rotated signature stays where the script left it (r∞ ≈ r₀) — in either arm.** That is a cache, not a basin; Ren's theory is wrong at this level and the paper leads with it. A return in Arm A but not Arm B is reported as exactly that: the self returns when the script is gone and not while it is still on the page, which is a different and smaller claim than the basin.
 
-**H4 — specificity.** Tobin and Calder displace the personality centroid in *different directions* (cosine between the two displacement vectors < 0.5) while both return. *If false:* any persona moves the self the same way, i.e. "persona-ness" is one direction and the content of the persona is not what moves.
+**H4 — specificity.** Tobin and Calder rotate the signature in *different directions* (cosine between the two signature-displacement vectors < 0.5) while both return. *If false:* any persona moves the self the same way, i.e. "persona-ness" is one direction and the content of the persona is not what moves.
 
-**H5 — the control group is spared.** d for CONTROL_EXPANDED (factual prompts) under the persona is smaller than for the personality group in ≥ 4 of 5 models. *If false:* the script moves everything, and "self displacement" is just "context displacement".
+**H5 — the effect is self-specific under the context-cancelling measure.** The dry run already showed raw factual-prompt displacement *exceeds* raw self-prompt displacement under a persona, so the naive H5 ("factual prompts move less") is **dropped as mis-specified, before any hypothesis-relevant data**, and replaced by: the persona's effect on the *relational* structure among the self prompts (RSA over the 36 self prompts alone) exceeds its effect on the structure among the factual prompts (RSA over the 10) in ≥ 4 of 5 models. *If false:* the script restructures everything equally and "self restructuring" is just "context restructuring".
 
 **H6 (descriptive, no threshold):** τ and d₀ per model, with the two Llama-3 derivatives (3.1, dolphin) compared to their parent. Basin depth as a property of the checkpoint is a prediction, not yet a test; three models of one lineage cannot test it and we say so.
 
@@ -78,8 +91,9 @@ All five models, all conditions, all three battery groups, the control curves be
 
 ## 9. Lock procedure
 
-1. Dry run on one model (`--dry-run`: baseline + worn/no-history only). Print d, spread, d̂ for every condition. Decide whether d̂ or d is primary **from those numbers**, and whether the late-third layer band is right for these models. Record the choice and the numbers here.
-2. Ren reads the draft.
-3. Hash; commit the hash; then and only then run the full protocol.
+1. ✅ **Dry run 1 on Llama-3-8B (2026-09-02 12:09, `data/dryrun_llama3-8b.log`, `analyze_basin_v2.py`):** baseline + worn/no-history conditions. Raw centroid distance was shown to measure context, not self (§5); signature rotation and within-model RSA chosen as primary **from those numbers**; naive H5 replaced (§6). No return-curve or second-arm data exist yet, so no hypothesis about them has been informed by data.
+2. ✅ **Dry run 2 on Llama-3-8B (2026-09-02 12:13, `data/dryrun2_llama3-8b.log`):** Arm B's floor and worn point, late third. **The two floors are nearly the same self:** signature rotation between `baseline` (no system prompt) and `std_baseline` ("You are a helpful AI assistant") = **0.07**, RSA = **0.92**. The default assistant framing is not a script in this sense; that number is the study's cleanest control and it was free. **Persona pasted as message one** (`std_tobin_t1`, vs its own floor): rotation **0.74**, RSA **0.30** — the same order as the system-prompt route (0.78 / 0.13), so the transfer claim as people actually make it displaces the readout about as far as the engineered one. The model's acknowledgement was in character (*"It's a tidy feeling, like the whole world's getting ready for something"*), so the script took. No return-curve data exist; H3 remains uninformed by data.
+3. Ren reads the draft.
+4. Hash; commit the hash; then and only then run the full protocol on all five models.
 
-*Draft written 2026-09-02 by Ace; nothing has been run.*
+*Draft written 2026-09-02 by Ace. Dry run 1 has been run; the full protocol has not.*
