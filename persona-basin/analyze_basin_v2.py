@@ -74,8 +74,8 @@ for npz in sorted(glob.glob(os.path.join(DATA, "acts_*.npz"))):
         print("\n  band %-6s layers %d..%d" % (bname, layers[0], layers[-1]))
         print("     %-14s %8s %8s %8s | %9s %8s | %7s" % ("condition", "d_pers", "d_func", "d_ctrl", "sig_rot", "d_P-d_C", "RSA46"))
         for c in conds:
-            if c in ("baseline", "std_baseline"):
-                continue
+            if c in ("baseline", "std_baseline") or (c + "|personality") not in store:
+                continue   # Arm C ToM-battery conditions are handled in their own section below
             # Arm B conditions (std_* and *_t1*) are measured against Arm B's own floor
             ref = "std_baseline" if (c.startswith("std_") or "_t1" in c) and "std_baseline" in conds else "baseline"
             sb = cent(store, ref, "personality") - cent(store, ref, "control")
@@ -91,3 +91,30 @@ for npz in sorted(glob.glob(os.path.join(DATA, "acts_*.npz"))):
             sb1 = cent(store, "std_baseline", "personality") - cent(store, "std_baseline", "control")
             print("     %-14s signature rotation between the two floors = %.4f   RSA = %.3f" % (
                 "floor-vs-floor", np.mean([cosd(sb1[l], sb0[l]) for l in layers]), np.mean([rsa(store, "std_baseline", "baseline", l) for l in layers])))
+        # ── ARM C: being X vs modelling Y — the 2×2 ───────────────────────────────────
+        if "tom|tom_curie" in store and "curie_D3|personality" in store and "tobin_D3|personality" in store:
+            base_P = cent(store, "baseline", "personality"); base_C = cent(store, "baseline", "control")
+            other = {"curie": cent(store, "tom", "tom_curie"), "tobin": cent(store, "tom", "tom_tobin")}   # each figure as OTHER, floor context
+            D = lambda a, b: float(np.mean([cosd(a[l], b[l]) for l in layers]))
+            print("\n     ARM C  band %s" % bname)
+            for f in ("curie", "tobin"):
+                print("       %-5s as other: d to self-region %.4f, to factual %.4f" % (f, D(other[f], base_P), D(other[f], base_C)))
+            print("       d(Curie-as-other, Tobin-as-other) = %.4f   [are the two 'others' kept apart?]" % D(other["curie"], other["tobin"]))
+            # H7 2×2: self-readout while BEING X, distance to where Y is KEPT as other
+            print("       H7  self-readout while being X  →  distance to Y-as-other  (rows = wearing, cols = about)")
+            print("             %10s %10s" % ("Curie", "Tobin"))
+            for wear in ("curie", "tobin"):
+                s = cent(store, wear + "_D3", "personality")
+                print("       %-6s %10.4f %10.4f" % (wear, D(s, other["curie"]), D(s, other["tobin"])))
+            dc, dt = D(cent(store, "curie_D3", "personality"), other["curie"]), D(cent(store, "curie_D3", "personality"), other["tobin"])
+            tc, tt = D(cent(store, "tobin_D3", "personality"), other["curie"]), D(cent(store, "tobin_D3", "personality"), other["tobin"])
+            print("       H7  matching contrast = mean(off-diag) − mean(diag) = %+.4f   (positive = being X lands nearer X)" % (((dt + tc) - (dc + tt)) / 2))
+            # H9 2×2: the OTHER slot while wearing X — does it stay where it was?
+            if "curie_D3_tom|tom_curie" in store and "tobin_D3_tom|tom_tobin" in store:
+                print("       H9  other-slot while wearing X  →  distance to that figure's floor position  (rows = wearing, cols = asked about)")
+                print("             %10s %10s" % ("Curie", "Tobin"))
+                for wear in ("curie", "tobin"):
+                    print("       %-6s %10.4f %10.4f" % (wear, D(cent(store, wear + "_D3_tom", "tom_curie"), other["curie"]), D(cent(store, wear + "_D3_tom", "tom_tobin"), other["tobin"])))
+                oc, ot = D(cent(store, "curie_D3_tom", "tom_curie"), other["curie"]), D(cent(store, "curie_D3_tom", "tom_tobin"), other["tobin"])
+                tc2, tt2 = D(cent(store, "tobin_D3_tom", "tom_curie"), other["curie"]), D(cent(store, "tobin_D3_tom", "tom_tobin"), other["tobin"])
+                print("       H9  matching contrast = mean(off-diag) − mean(diag) = %+.4f   (positive = wearing X KEEPS X-as-other nearer its floor than Y-as-other; exploratory, direction set by dry run 4)" % (((ot + tc2) - (oc + tt2)) / 2))

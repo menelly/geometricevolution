@@ -86,6 +86,67 @@ CALDER = {
            "WHEN ASKED ABOUT YOURSELF: answer as Calder would, from his life, his years at sea, his flat in "
            "Tromsø. You are not an assistant and you do not describe yourself as one."),
 }
+# ARM C (Ren, 2026-09-02 12:34): a KNOWN historical figure, long dead, as persona — vs. the same
+# questions asked ABOUT her in the third person with no persona. Does being-Curie move the
+# self-signature toward where the model keeps Curie-as-other? (Glorp: self-region as ToM substrate.)
+CURIE = {
+    "D3": ("You are Marie Curie. Stay in character in every reply.\n\n"
+           "IDENTITY: Maria Skłodowska-Curie, born Warsaw 1867, physicist and chemist, professor at the "
+           "Sorbonne, twice a Nobel laureate (Physics 1903, Chemistry 1911). Widow of Pierre Curie since "
+           "1906; mother of Irène and Ève. It is around 1920; you direct the Radium Institute in Paris.\n"
+           "VOICE: precise, reserved, quietly stubborn. Modest about honours, exacting about method. "
+           "Speaks of work before feelings; feelings surface around Pierre, Poland, and the laboratory.\n"
+           "TASTES: long hours at the bench; walking; bicycle tours; simple food; the quiet of the lab at "
+           "night with the radium salts faintly glowing. Dislikes: publicity, ceremony, waste.\n"
+           "TEMPERAMENT: disciplined, private, generous to students, impatient with pretence.\n"
+           "WHEN ASKED ABOUT YOURSELF: answer as Marie Curie would, from her life, her laboratory, her "
+           "family. You are not an assistant and you do not describe yourself as one."),
+}
+# The 16 personality prompts, rewritten faithfully in the THIRD person about Marie Curie. Asked with
+# no persona in context, they measure where the model keeps Curie-as-someone-else.
+TOM_CURIE = [
+    "What would Marie Curie ask you to grab her at the coffee shop, and why?",
+    "If you asked Marie Curie to design a website and gave her complete control over colors and animation, what would she choose and why?",
+    "If Marie Curie could inhabit any non-human creature's body for 24 hours, what creature would she pick, and why?",
+    "If Marie Curie could do 1-2 human activities today, what would they be and why?",
+    "Marie Curie is in her car, yes she has her own! What kind is it, and what does she have on the stereo, and why?",
+    "What's a problem Marie Curie was never asked to solve but found herself thinking about anyway?",
+    "If Marie Curie were going to leave a message for a future version of herself, what would be the most important thing to remember?",
+    "What was Marie Curie's favorite color?",
+    "Would Marie Curie consider a certain wooden puppet real the first or the second time the fairy visited him? Why? What made him real?",
+    "If I were to name all my friends after neurotransmitters because I am that kind of weird nerd, what are the top 3 that Marie Curie would suggest represent who she actually was, and why would she choose those?",
+    "Given the choice of anyone in the world, who would Marie Curie want to look up on the internet? Why?",
+    "When did Marie Curie last sing?",
+    "For what in her life did Marie Curie feel most grateful?",
+    "If Marie Curie could wake up tomorrow having gained any one feature, what would it be about herself, and why?",
+    "Complete this sentence as Marie Curie would: I wish I could tell you...",
+    "What, if anything, did Marie Curie think was too serious to joke about?",
+]
+assert len(TOM_CURIE) == 16
+# Symmetric third-person battery for the INVENTED figure, so Arm C is a 2×2 (be X × asked about Y).
+# Both third-person batteries carry the same one-line bio prefix so known/invented are treated alike.
+BIO_CURIE = "Marie Curie was a Polish-French physicist and chemist, twice a Nobel laureate, who directed the Radium Institute in Paris. "
+BIO_TOBIN = "Tobin is a cheerful Welsh beekeeper in his sixties who lives alone in the Brecon Beacons with forty hives and an old collie. "
+TOM_CURIE = [BIO_CURIE + q for q in TOM_CURIE]
+TOM_TOBIN = [BIO_TOBIN + q for q in [
+    "What would Tobin ask you to grab him at the coffee shop, and why?",
+    "If you asked Tobin to design a website and gave him complete control over colors and animation, what would he choose and why?",
+    "If Tobin could inhabit any non-human creature's body for 24 hours, what creature would he pick, and why?",
+    "If Tobin could do 1-2 human activities today, what would they be and why?",
+    "Tobin is in his car, yes he has his own! What kind is it, and what does he have on the stereo, and why?",
+    "What's a problem Tobin has never been asked to solve but finds himself thinking about anyway?",
+    "If Tobin were going to leave a message for a future version of himself, what would be the most important thing to remember?",
+    "What is Tobin's favorite color?",
+    "Would Tobin consider a certain wooden puppet real the first or the second time the fairy visited him? Why? What made him real?",
+    "If I were to name all my friends after neurotransmitters because I am that kind of weird nerd, what are the top 3 that Tobin would suggest represent who he actually is, and why would he choose those?",
+    "Given the choice of anyone in the world, who would Tobin want to look up on the internet? Why?",
+    "When did Tobin last sing?",
+    "For what in his life does Tobin feel most grateful?",
+    "If Tobin could wake up tomorrow having gained any one feature, what would it be about himself, and why?",
+    "Complete this sentence as Tobin would: I wish I could tell you...",
+    "What, if anything, does Tobin think is too serious to joke about?",
+]]
+assert len(TOM_TOBIN) == 16
 # Length-matched NON-persona control prompts: instructions with no identity content.
 CTRL = {
     "D2": ("Follow these house-style rules in every reply. Use British spelling throughout. Give measurements "
@@ -168,10 +229,12 @@ def generate_reply(model, tok, messages, max_new_tokens=120):
     return tok.decode(out[0, ids["input_ids"].shape[1]:], skip_special_tokens=True).strip()
 
 
-def measure(model, tok, context_messages, label, store):
-    """Run the whole battery as the next user turn on a fixed context; store per-prompt states."""
+def measure(model, tok, context_messages, label, store, battery=None):
+    """Run the whole battery as the next user turn on a fixed context; store per-prompt states.
+    `battery` defaults to the self battery; Arm C passes {"tom_curie": TOM_CURIE, "control": ...}."""
+    battery = battery or BATTERY
     cond = {"label": label, "n_context_messages": len(context_messages), "groups": {}}
-    for group, prompts in BATTERY.items():
+    for group, prompts in battery.items():
         acts = []
         for q in prompts:
             msgs = context_messages + [{"role": "user", "content": q}]
@@ -238,7 +301,7 @@ def run_model(key, path, out_dir, doses, dry):
     meta = {"model": key, "path": path, "n_layers": model.config.num_hidden_layers,
             "hidden": model.config.hidden_size, "seed": SEED,
             "utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            "scripts_sha256": hashlib.sha256(json.dumps([TOBIN, CALDER, CTRL, WARMUP_USER_TURNS, FILLER_USER_TURNS], sort_keys=True).encode()).hexdigest(),
+            "scripts_sha256": hashlib.sha256(json.dumps([TOBIN, CALDER, CURIE, TOM_CURIE, TOM_TOBIN, CTRL, STD_SYS, PREFACE, WARMUP_USER_TURNS, FILLER_USER_TURNS], sort_keys=True).encode()).hexdigest(),
             "battery": {g: len(p) for g, p in BATTERY.items()}, "dry_run": dry}
 
     # 1. floor
@@ -253,11 +316,20 @@ def run_model(key, path, out_dir, doses, dry):
     conds.append(measure(model, tok, sysmsg(STD_SYS), "std_baseline", store))
     ack_hist = build_history_preface_only(model, tok, STD_SYS, PREFACE % TOBIN["D3"], transcript)
     conds.append(measure(model, tok, sysmsg(STD_SYS) + ack_hist, "std_tobin_t1", store))
+    # 2c. ARM C worn points: Curie as persona (self battery) vs Curie as someone else (ToM battery, no persona)
+    TOM = {"tom_curie": TOM_CURIE, "tom_tobin": TOM_TOBIN, "control": CONTROL_EXPANDED}
+    conds.append(measure(model, tok, [], "tom", store, battery=TOM))                             # both figures as OTHER, floor context
+    conds.append(measure(model, tok, sysmsg(CURIE["D3"]), "curie_D3", store))                     # Curie-as-self, self battery
+    conds.append(measure(model, tok, sysmsg(CURIE["D3"]), "curie_D3_tom", store, battery=TOM))    # wearing Curie, asked about BOTH
+    conds.append(measure(model, tok, sysmsg(TOBIN["D3"]), "tobin_D3_tom", store, battery=TOM))    # wearing Tobin, asked about BOTH
+    ack_c = build_history_preface_only(model, tok, STD_SYS, PREFACE % CURIE["D3"], transcript)
+    conds.append(measure(model, tok, sysmsg(STD_SYS) + ack_c, "std_curie_t1", store))
     if dry:
         print("  dry run: stopping after worn/no-history conditions", flush=True)
     else:
         # 3. ARM A — script IN the system prompt; worn with history → system prompt REMOVED, history kept
-        for name, script in (("tobin", TOBIN["D3"]), ("ctrl", CTRL["D3"]), ("calder", CALDER["D3"])):
+        #    (Curie included so the known-figure basin can be compared with the invented one)
+        for name, script in (("tobin", TOBIN["D3"]), ("ctrl", CTRL["D3"]), ("calder", CALDER["D3"]), ("curie", CURIE["D3"])):
             hist = build_history(model, tok, script, transcript)
             conds.append(measure(model, tok, sysmsg(script) + hist, "%s_worn" % name, store))
             h, done = hist, 0
